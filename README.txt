@@ -27,4 +27,4 @@ Quickstart: install CivicCore first with python -m pip install https://github.co
 
 Set CIVICPERMIT_INTAKE_DB_URL to enable persistent permit requirement, intake review, and staff review queue records. Persisted staff routes require CIVICPERMIT_STAFF_API_KEY, X-CivicPermit-Role: staff, and matching X-CivicPermit-Staff-Key from a trusted staff or service workflow. When unset, CivicPermit continues to use deterministic in-memory sample data for public applicant guidance.
 
-Code license: Apache 2.0. Documentation license: CC BY 4.0.
+Code license: AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. See LICENSE and LICENSE-EXCEPTION.md. Documentation license: CC BY 4.0 (LICENSE-DOCS).

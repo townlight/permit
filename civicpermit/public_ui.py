@@ -64,7 +64,7 @@ def render_public_lookup_page() -> str:
     <article class="card"><p class="kicker">Boundary</p><h2>No permit approval</h2><div class="result warning"><p>CivicPermit does not approve permits, calculate official fees, schedule inspections, or replace the permitting system of record.</p></div></article>
   </section>
 </main>
-<footer><p>CivicPermit is part of the Apache 2.0 CivicSuite open-source municipal AI project.</p></footer>
+<footer><p>CivicPermit is part of the AGPL-3.0 CivicSuite open-source municipal AI project.</p></footer>
 </body>
 </html>
 """
