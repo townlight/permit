@@ -26,9 +26,9 @@ from civicpermit.submittal_outline import draft_submittal_outline
 
 
 app = FastAPI(
-    title="CivicPermit",
+    title='Townlight Permitting',
     version=__version__,
-    description="Permit pre-application and development-review intake support for CivicSuite.",
+    description='Permit pre-application and development-review intake support for Townlight.',
 )
 
 _intake_repository: PermitIntakeRepository | None = None

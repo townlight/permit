@@ -1,8 +1,10 @@
 # GitHub Discussions Seed Posts
 
-## Welcome to CivicPermit
+<a id="welcome-to-civicpermit"></a>
 
-CivicPermit is the CivicSuite module for permit pre-application and development-review intake support.
+## Welcome to Townlight Permitting
+
+Townlight Permitting is the Townlight module for permit pre-application and development-review intake support.
 
 ## What should be reviewed first?
 

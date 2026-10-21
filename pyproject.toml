@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "civicpermit"
 version = "0.2.2"
-description = "CivicPermit runtime foundation for permit pre-application and development-review intake support."
+description = "Townlight Permitting runtime foundation for permit pre-application and development-review intake support."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0-only" }

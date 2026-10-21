@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping CivicPermit become useful municipal software.
+Thank you for helping Townlight Permitting become useful municipal software.
 
 ## Development Loop
 
@@ -11,7 +11,7 @@ Thank you for helping CivicPermit become useful municipal software.
 
 ## Boundaries
 
-- CivicPermit gives permit-intake support, not permit approvals or official completeness determinations.
+- Townlight Permitting gives permit-intake support, not permit approvals or official completeness determinations.
 - Do not present generated submittal outlines as publication-ready without permit-counter staff review.
-- Do not import CivicCore placeholder packages.
+- Do not import Townlight Core placeholder packages.
 - Do not claim planned behavior is shipped.

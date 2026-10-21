@@ -1,4 +1,6 @@
-# CivicPermit Milestones
+<a id="civicpermit-milestones"></a>
+
+# Townlight Permitting Milestones
 
 ## Milestone 0/1 - Scaffold And Runtime
 
