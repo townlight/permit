@@ -1,10 +1,12 @@
-# CivicPermit v1.0.0 Careful-Coding Evidence
+<a id="civicpermit-v100-careful-coding-evidence"></a>
+
+# Townlight Permitting v1.0.0 Careful-Coding Evidence
 
 Date: 2026-05-21
 
 ## Scope
 
-Finish CivicPermit v1.0.0 public-use module release depth without touching queued modules.
+Finish Townlight Permitting v1.0.0 public-use module release depth without touching queued modules.
 
 Changed areas:
 
@@ -48,7 +50,7 @@ Searched for:
 - `not shipped yet`
 - `Post-v0.1.2`
 - stale CivicZone/CivicCode version references
-- stale CivicCore v1.0 references
+- stale Townlight Core v1.0 references
 
 Current-facing release surfaces were updated to v1.0.0. Historical v0.1.x QA files remain historical evidence.
 
@@ -63,9 +65,9 @@ New v1.0.0 contracts:
 
 ## Step 5 - Blast Radius
 
-This changes CivicPermit's v1 API surface in `main.py`, `persistence.py`, tests, and docs. Existing v0.1.2 tests/docs assumed staff queues were unshipped; leaving those stale would create false release-readiness claims.
+This changes Townlight Permitting's v1 API surface in `main.py`, `persistence.py`, tests, and docs. Existing v0.1.2 tests/docs assumed staff queues were unshipped; leaving those stale would create false release-readiness claims.
 
-This recovery pass also changes release infrastructure by adding the Agent Pipeline for Codex v0.9.0 policy scaffold and a tag-triggered GitHub release workflow. The blast radius is limited to CivicPermit source release truth and CI/release publication.
+This recovery pass also changes release infrastructure by adding the Agent Pipeline for Codex v0.9.0 policy scaffold and a tag-triggered GitHub release workflow. The blast radius is limited to Townlight Permitting source release truth and CI/release publication.
 
 ## Steps 6-8 - Post-Edit Path Proof
 
@@ -79,7 +81,7 @@ Render/data proof:
 - Queue lifecycle is asserted by `test_staff_review_queue_lifecycle_is_staff_gated_and_persistent`.
 - Integration findings are asserted by `test_integration_adversarial_mocks.py`.
 - UI v1 badge and boundary warning are asserted by tests and Playwright evidence.
-- Pipeline policy checks prove edited paths stay within the CivicPermit v1.0.0 scope lock.
+- Pipeline policy checks prove edited paths stay within the Townlight Permitting v1.0.0 scope lock.
 
 ## Step 9 - Self-Audit
 

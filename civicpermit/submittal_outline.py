@@ -1,4 +1,4 @@
-"""Submittal outline helpers for CivicPermit."""
+"""Submittal outline helpers for Townlight Permitting."""
 
 from __future__ import annotations
 

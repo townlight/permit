@@ -1,4 +1,4 @@
-"""FastAPI runtime foundation for CivicPermit."""
+"""FastAPI runtime foundation for Townlight Permitting."""
 
 import os
 from typing import Annotated
@@ -26,9 +26,9 @@ from civicpermit.submittal_outline import draft_submittal_outline
 
 
 app = FastAPI(
-    title="CivicPermit",
+    title='Townlight Permitting',
     version=__version__,
-    description="Permit pre-application and development-review intake support for CivicSuite.",
+    description='Permit pre-application and development-review intake support for Townlight.',
 )
 
 _intake_repository: PermitIntakeRepository | None = None
@@ -96,7 +96,7 @@ def root() -> dict[str, str]:
         "version": __version__,
         "status": "v1 permit pre-application and intake-readiness runtime",
         "message": (
-            "CivicPermit package, API foundation, configurable permit requirement records, "
+            "Townlight Permitting package, API foundation, configurable permit requirement records, "
             "database-backed intake records, staff review queues, development-review context "
             "packets, intake-readiness review, submittal outline helper, records-ready export "
             "checklist, and public UI foundation are online; permit approvals, official "
@@ -135,7 +135,7 @@ async def validation_exception_handler(
         status_code=422,
         content={
             "detail": {
-                "message": f"CivicPermit could not validate: {field_list}.",
+                "message": f"Townlight Permitting could not validate: {field_list}.",
                 "fix": (
                     "Send a JSON body that includes the required field names listed in "
                     "the fields array, using strings for text inputs."
@@ -208,9 +208,9 @@ def development_review_context(request: DevelopmentReviewContextRequest) -> dict
     )
     citations = [requirement.citation]
     if request.zoning_context_id:
-        citations.append(f"CivicZone context: {request.zoning_context_id}")
+        citations.append(f"Townlight Zoning context: {request.zoning_context_id}")
     if request.code_context_id:
-        citations.append(f"CivicCode context: {request.code_context_id}")
+        citations.append(f"Townlight Code context: {request.code_context_id}")
     return {
         "requirement_id": requirement.requirement_id,
         "project_type": requirement.project_type,
@@ -222,7 +222,7 @@ def development_review_context(request: DevelopmentReviewContextRequest) -> dict
         "review_required": True,
         "source": source,
         "boundary": (
-            "CivicPermit provides pre-application intake context only; it is not a "
+            "Townlight Permitting provides pre-application intake context only; it is not a "
             "permit approval, official completeness determination, fee calculation, "
             "inspection result, or system-of-record action."
         ),
@@ -251,7 +251,7 @@ def get_intake_review(
         raise HTTPException(
             status_code=503,
             detail={
-                "message": "CivicPermit intake persistence is not configured.",
+                "message": "Townlight Permitting intake persistence is not configured.",
                 "fix": "Set CIVICPERMIT_INTAKE_DB_URL to retrieve persisted intake review records.",
             },
         )
@@ -348,7 +348,7 @@ def update_staff_review(
         raise HTTPException(
             status_code=404,
             detail={
-                "message": "CivicPermit staff review item was not found.",
+                "message": "Townlight Permitting staff review item was not found.",
                 "fix": "List staff reviews and retry with an existing review_id.",
             },
         )
@@ -398,7 +398,7 @@ def _require_persistence_configured() -> None:
     raise HTTPException(
         status_code=503,
         detail={
-            "message": "CivicPermit staff review persistence is not configured.",
+            "message": "Townlight Permitting staff review persistence is not configured.",
             "fix": "Set CIVICPERMIT_INTAKE_DB_URL before using staff review queue routes.",
         },
     )

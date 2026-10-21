@@ -1,4 +1,4 @@
-"""Adversarial local integration contracts for CivicPermit."""
+"""Adversarial local integration contracts for Townlight Permitting."""
 
 from __future__ import annotations
 
@@ -24,9 +24,9 @@ def validate_development_review_mocks(payload: dict[str, Any]) -> IntegrationMoc
     if payload.get("role") not in {"staff", "service"}:
         findings.append("Rejected context payload without trusted staff or service role.")
     if not payload.get("zoning_context_id"):
-        findings.append("Missing CivicZone context ID; route parcel assumptions to planning staff.")
+        findings.append("Missing Townlight Zoning context ID; route parcel assumptions to planning staff.")
     if not payload.get("code_context_id"):
-        findings.append("Missing CivicCode context ID; cite code context before applicant guidance.")
+        findings.append("Missing Townlight Code context ID; cite code context before applicant guidance.")
     if payload.get("permit_approval") is True:
         findings.append("Rejected attempted permit approval in integration context.")
     if payload.get("fee_calculation") is not None:
@@ -41,7 +41,7 @@ def validate_development_review_mocks(payload: dict[str, Any]) -> IntegrationMoc
         review_required=True,
         findings=tuple(findings),
         boundary=(
-            "CivicPermit validates local integration context only; it does not call live "
-            "CivicZone, CivicCode, GIS, LLM, or permitting-system services in this recovery release."
+            "Townlight Permitting validates local integration context only; it does not call live "
+            "Townlight Zoning, Townlight Code, GIS, LLM, or permitting-system services in this recovery release."
         ),
     )
