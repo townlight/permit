@@ -61,4 +61,5 @@ Set `CIVICPERMIT_INTAKE_DB_URL` to enable persistent permit requirement, intake 
 
 ## License
 
-Code is Apache 2.0. Documentation is CC BY 4.0.
+Code: AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. See [LICENSE](LICENSE) and [LICENSE-EXCEPTION.md](LICENSE-EXCEPTION.md).
+Documentation: CC BY 4.0 ([LICENSE-DOCS](LICENSE-DOCS)).

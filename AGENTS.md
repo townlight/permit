@@ -14,7 +14,7 @@
 - Public-facing warnings must be actionable and explain the fix path.
 - CivicPermit depends on CivicCore; CivicCore must never depend on CivicPermit.
 - CivicPermit may reference CivicCode/CivicZone concepts only through released contracts or deterministic sample data in v0.1.0.
-- Code is Apache 2.0. Docs are CC BY 4.0.
+- Code is AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. Docs are CC BY 4.0.
 
 ## Placeholder Package Warning
 
