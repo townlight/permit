@@ -1,4 +1,4 @@
-"""Permit intake-readiness helpers for CivicPermit."""
+"""Permit intake-readiness helpers for Townlight Permitting."""
 
 from __future__ import annotations
 

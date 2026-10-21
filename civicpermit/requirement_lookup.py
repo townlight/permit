@@ -1,4 +1,4 @@
-"""Deterministic permit requirement lookup helpers for CivicPermit."""
+"""Deterministic permit requirement lookup helpers for Townlight Permitting."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 
 DISCLAIMER = (
-    "CivicPermit provides intake-support information only. It does not approve permits, "
+    "Townlight Permitting provides intake-support information only. It does not approve permits, "
     "calculate official fees, determine completeness, schedule inspections, or replace the "
     "permitting system of record."
 )
