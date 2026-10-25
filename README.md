@@ -22,7 +22,7 @@ It does **not** ship permit approvals, official completeness determinations, fee
 - Validates local adversarial integration mocks for missing context, spoofed approvals, fee attempts, stale sources, and role spoofing.
 - Demonstrates a public pre-application intake UI at `/civicpermit`.
 
-## Connected staff development workflow — 0.3.0+dev.1
+## Connected staff development workflow - 0.3.0+dev.1
 
 An unpublished connected workflow now adds versioned municipal requirement originals, intake cases, explicit material review, staff-attributed review, permission/hash checked Code and Zoning citations, immutable staff packets and separately edited Records copies. It runs through the opt-in Townlight desktop candidate using canonical native sessions and PostgreSQL. No signing or publication is claimed. See [the connected workflow guide](docs/connected-workflow.md). The sample endpoints below remain historical scaffolding and are not the connected staff API.
 
