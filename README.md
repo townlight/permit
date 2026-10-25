@@ -4,7 +4,7 @@
 
 Townlight Permitting is the Townlight module for permit pre-application and development-review intake support.
 
-Current state: **v0.2.2 corrective demotion state - deterministic scaffold; no real AI layer, full frontend, Alembic migrations, real municipal data/search, or public-use gate. The previous v1.0.0 release was published in error. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression. The Townlight Core pin is unchanged.**. This repo contains a FastAPI package aligned to the published Townlight Core v1.1.0 release wheel, health/root endpoints, documentation gates, deterministic and database-backed permit requirement lookup, staff-gated persisted intake records, staff review queues, review-required CivicZone/CivicCode context packets, adversarial local integration mocks, intake-readiness review, submittal outline support, records-ready export checklist, and accessible public sample UI at `/civicpermit`. See [docs/release-recovery-status.md](docs/release-recovery-status.md) for the local release gate, browser QA, and CI evidence.
+Historical published state: **v0.2.2 corrective demotion state - deterministic scaffold; no real AI layer, full frontend, Alembic migrations, real municipal data/search, or public-use gate. The previous v1.0.0 release was published in error. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression. The Townlight Core pin is unchanged.**. This repo contains a FastAPI package aligned to the published Townlight Core v1.1.0 release wheel, health/root endpoints, documentation gates, deterministic and database-backed permit requirement lookup, staff-gated persisted intake records, staff review queues, review-required CivicZone/CivicCode context packets, adversarial local integration mocks, intake-readiness review, submittal outline support, records-ready export checklist, and accessible public sample UI at `/civicpermit`. See [docs/release-recovery-status.md](docs/release-recovery-status.md) for the local release gate, browser QA, and CI evidence.
 
 It does **not** ship permit approvals, official completeness determinations, fee calculations, inspections, legal advice, live GIS, live LLM calls, permit-system writeback, or system-of-record behavior.
 
@@ -22,12 +22,16 @@ It does **not** ship permit approvals, official completeness determinations, fee
 - Validates local adversarial integration mocks for missing context, spoofed approvals, fee attempts, stale sources, and role spoofing.
 - Demonstrates a public pre-application intake UI at `/civicpermit`.
 
+## Connected staff development workflow — 0.3.0+dev.1
+
+An unpublished connected workflow now adds versioned municipal requirement originals, intake cases, explicit material review, staff-attributed review, permission/hash checked Code and Zoning citations, immutable staff packets and separately edited Records copies. It runs through the opt-in Townlight desktop candidate using canonical native sessions and PostgreSQL. No signing or publication is claimed. See [the connected workflow guide](docs/connected-workflow.md). The sample endpoints below remain historical scaffolding and are not the connected staff API.
+
 ## Developer Quickstart
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install https://github.com/CivicSuite/civiccore/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+python -m pip install https://github.com/townlight/core/releases/download/v1.2.1/civiccore-1.2.1-py3-none-any.whl
 python -m pip install -e ".[dev]"
 python -m pytest -q
 bash scripts/verify-release.sh
@@ -38,7 +42,7 @@ For WSL verification:
 ```bash
 python3 -m venv .venv-wsl
 . .venv-wsl/bin/activate
-python -m pip install https://github.com/CivicSuite/civiccore/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+python -m pip install https://github.com/townlight/core/releases/download/v1.2.1/civiccore-1.2.1-py3-none-any.whl
 python -m pip install -e ".[dev]"
 python -m pytest -q
 bash scripts/verify-release.sh

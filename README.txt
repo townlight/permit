@@ -3,6 +3,8 @@ Townlight Permitting
 
 Townlight Permitting is the Townlight module for permit pre-application and development-review intake support.
 
+Unpublished source: 0.3.0+dev.1 connected staff candidate. Configured municipal requirements, immutable case revisions, current permission-checked Code/Zoning evidence, attributed human review and an explicit Records copy. See docs/connected-workflow.md. Historical release context follows; this source change does not publish or sign an installer.
+
 Current state: v0.2.2 corrective demotion state. The previous v1.0.0 release was published in error. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the Townlight Core pin unchanged. This repo contains a deterministic scaffold aligned to the published Townlight Core v1.1.0 release wheel, health/root endpoints, documentation gates, deterministic and database-backed permit requirement lookup, staff-gated persisted intake records, staff review queues, review-required CivicZone/CivicCode context packets, adversarial local integration mocks, intake-readiness review, submittal outline support, records-ready export checklist, and accessible public sample UI at /civicpermit.
 
 It does not ship permit approvals, official completeness determinations, fee calculations, inspections, legal advice, live GIS, live LLM calls, permit-system writeback, or system-of-record behavior.
