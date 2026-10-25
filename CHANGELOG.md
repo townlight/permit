@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0+dev.1] - Unreleased
+
+- Add migrated configured municipal requirement originals and immutable intake revisions.
+- Add Code/Zoning source permission and hash validation, staff review attribution and separate Records copies.
+- Use implemented Townlight Core 1.2.1 audit hashing. The historical release artifacts below remain intact.
+- Native desktop wiring and unsigned installed acceptance are tracked in the paired Townlight repository; no signing or publication is part of this change.
+
 ## [0.2.2] - 2026-05-23
 
 - Narrow truth-repair release. No functional upgrade.
