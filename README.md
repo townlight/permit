@@ -1,3 +1,28 @@
+# Townlight Permitting
+
+**Complete the intake workpaper before the official decision.**
+
+Permitting supports pre-application and intake preparation. The city’s permitting system remains the system of record. A material assessment is staff work, not an official completeness decision.
+
+## Use this product
+
+- [Current user manual](USER-MANUAL.md): installed workflow, roles, sources, review, export, recovery and limits.
+- [Product landing page](https://townlight.github.io/products/permitting/).
+- [Overall eight-product manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) and [feature/integration assessment](https://github.com/townlight/townlight/blob/main/docs/assessment/feature-and-integration-review.md).
+- [Signed composition and acceptance](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-planning-permitting-v1.6.0-beta.1): Signed Permitting 1.6.0-beta.1.
+
+Permitting consumes Core, Code and Zoning, and sends a reviewed copy to Records. The release does not connect every permitting vendor or automatically create an Inspections case.
+
+## Release scope
+
+No permit issuance, fee collection, inspection scheduling, official entitlement determination, public applicant portal or live permit-system writeback is provided. Read-only vendor status mirroring and hearing-notice integration from the broader catalog have not been established by the installed acceptance.
+
+Documentation reviewed 2026-10-26. Installed acceptance, source/API implementation and future requirements are different evidence. Code is AGPL-3.0-only with the repository’s public institution exception where applicable; documentation is CC BY 4.0. See the repository license files.
+
+## Historical repository reference
+
+The earlier README below is retained for package history and contributor commands. Older maturity/version statements describe that historical reference and are superseded by the current operating guide and linked release evidence.
+
 <a id="civicpermit"></a>
 
 # Townlight Permitting
