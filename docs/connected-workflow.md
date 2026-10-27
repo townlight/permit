@@ -1,6 +1,9 @@
-# Connected Permitting staff workflow — development candidate
+# Connected Permitting staff workflow
 
-This unpublished 0.3.0+dev.1 source adds intake support; it does not issue permits,
+The 0.3.0+dev.1 package described here is included in the signed 1.6.0-beta.1 composition. Package version and desktop release identity differ. Use the [current manual](../USER-MANUAL.md) for publication/installation status; the staff workflow and limits below remain applicable.
+
+
+This 0.3.0+dev.1 source adds intake support; it does not issue permits,
 determine official completeness, calculate fees, schedule inspections or write to
 a permitting system of record. Historical 0.2.2 release evidence remains intact.
 
