@@ -1,0 +1,1204 @@
+{
+  "edition": "Townlight Beta 1",
+  "base_commit": "51caa6d676b0e446c922c28e02e866aa5d551997",
+  "installer_sha256": "98bcdef11ebdf5c767f620c904ff49f85115fde3b5c23f62703b111e645aaf86",
+  "owned_source_sha256": "84a23e1297e42d17b16cfc9e51b2dd78bc46414c0de8ad7ebd2466c1a409d06b",
+  "documentation_sha256": "a928bb1c40fec7ef6f223c7b77bc9fe7837e4cfffcebf35bb3309cc5549284e6",
+  "release": "https://github.com/townlight/townlight/releases/tag/townlight-beta-1",
+  "archive_files": [
+    {
+      "archive": "products/permit/.github/ISSUE_TEMPLATE/bug_report.md",
+      "repo": "permit",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "c0c8f1be33d966cfdabb7447f315f02e1e9debb6744e04df474439229518068f",
+      "status": "same",
+      "publication_sha256": "c0c8f1be33d966cfdabb7447f315f02e1e9debb6744e04df474439229518068f"
+    },
+    {
+      "archive": "products/permit/.github/ISSUE_TEMPLATE/config.yml",
+      "repo": "permit",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "c2504dec34769c51e30616543bf784887a7519bd672fee9bad3d70ae9f946247",
+      "status": "same",
+      "publication_sha256": "18aaba0a72247e0cab789008552c1c1d87015ce2740e48bf9d5ac756a5b2359b"
+    },
+    {
+      "archive": "products/permit/.github/ISSUE_TEMPLATE/feature_request.md",
+      "repo": "permit",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "7fe7e95610856817dc583cea858816f64738581341c98f7e6f5d82a752f24ca4",
+      "status": "same",
+      "publication_sha256": "7fe7e95610856817dc583cea858816f64738581341c98f7e6f5d82a752f24ca4"
+    },
+    {
+      "archive": "products/permit/.github/PULL_REQUEST_TEMPLATE.md",
+      "repo": "permit",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "0feab4e42a28bec96f93e4a10ce67455761a6e2a2f157febf9baa093b4e92e06",
+      "status": "same",
+      "publication_sha256": "0feab4e42a28bec96f93e4a10ce67455761a6e2a2f157febf9baa093b4e92e06"
+    },
+    {
+      "archive": "products/permit/.github/workflows/release.yml",
+      "repo": "permit",
+      "path": ".github/workflows/release.yml",
+      "sha256": "79c7fab2b3070b1dec56c3b49a17d5646ce47f6ff445881d234f26bac41012f6",
+      "status": "same",
+      "publication_sha256": "a300a2ec184bcd16bd013e50e0339f11c3a2300ca345ca24b17ee4f40426ce05"
+    },
+    {
+      "archive": "products/permit/.github/workflows/verify.yml",
+      "repo": "permit",
+      "path": ".github/workflows/verify.yml",
+      "sha256": "5bac5e89237fe29e1f4195c0459e0fadb36f6b3e0a9f954ced9b98dd362de645",
+      "status": "same",
+      "publication_sha256": "e2dbf6285e3d1a44c57624fbce60a49a50dc3c94675dd4c04bbc9f98a7d2ab21"
+    },
+    {
+      "archive": "products/permit/.pipelines/action-classification.yaml",
+      "repo": "permit",
+      "path": ".pipelines/action-classification.yaml",
+      "sha256": "c4dbc23ed19cace8ea0fffeb6e875e57ad70473f8ae98842a5bbd67117ea29a2",
+      "status": "same",
+      "publication_sha256": "662b7d9ea2aff8d76ce59dcab4205c06d429f7787d9239a3edd904ff46a73ecf"
+    },
+    {
+      "archive": "products/permit/.pipelines/bugfix.yaml",
+      "repo": "permit",
+      "path": ".pipelines/bugfix.yaml",
+      "sha256": "e8cfdb75b879050f9f3e0216090bd29b01cc1d811694913b42186b82c6d7db90",
+      "status": "same",
+      "publication_sha256": "12ef4f5091975d4d0bb10188fd662984dca861f4f4ab73fbeaa20a279014b2ab"
+    },
+    {
+      "archive": "products/permit/.pipelines/directive-template.yaml",
+      "repo": "permit",
+      "path": ".pipelines/directive-template.yaml",
+      "sha256": "5d88863c06bbe252cbda98548b650d23f5db96b175aa5a5ee7c70637472fbe9b",
+      "status": "same",
+      "publication_sha256": "bff99943a054c1cbba47cd1fca43ce5ded344bf2ad4e0881a6b5e192226e47fe"
+    },
+    {
+      "archive": "products/permit/.pipelines/feature.yaml",
+      "repo": "permit",
+      "path": ".pipelines/feature.yaml",
+      "sha256": "4dbf62d79b76d8da9fe1cd46134b2fabf59aea3a87b0be9bc50025ed2a365275",
+      "status": "same",
+      "publication_sha256": "8ecbf791e71c1294ec0ead57f4d6f664e7729860f7e58d10085fb0a1c977c505"
+    },
+    {
+      "archive": "products/permit/.pipelines/manifest-template.yaml",
+      "repo": "permit",
+      "path": ".pipelines/manifest-template.yaml",
+      "sha256": "cae7ac4960f3a25f41ae020af2fd8ac261d1a5c57b80e1c46269ce80932bdcbd",
+      "status": "same",
+      "publication_sha256": "16436e50e88e27baf2f7e8a99b47137c38aa3af69b8c8c646eeeade3b6ec7a05"
+    },
+    {
+      "archive": "products/permit/.pipelines/module-release.yaml",
+      "repo": "permit",
+      "path": ".pipelines/module-release.yaml",
+      "sha256": "6e47ab3eb62b2a2c26043eb7503a0a323358f718d5a4bc0155fe94a10f55452f",
+      "status": "same",
+      "publication_sha256": "9a51ae3725614ffd1dc9c4ef7718e71e92172fd845897e57abd6aef3bccf96f4"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/critic.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/critic.md",
+      "sha256": "0cfd6ef39a8be04fe400daaebcaf00ee54887cdf178216970d3ecac7b80a3098",
+      "status": "same",
+      "publication_sha256": "0cfd6ef39a8be04fe400daaebcaf00ee54887cdf178216970d3ecac7b80a3098"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/cross-agent-auditor.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/cross-agent-auditor.md",
+      "sha256": "55c24c157a8e71ab91114ea9e33088a2f22a4be5abca924f38b685450db0674b",
+      "status": "same",
+      "publication_sha256": "55c24c157a8e71ab91114ea9e33088a2f22a4be5abca924f38b685450db0674b"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/drift-detector.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/drift-detector.md",
+      "sha256": "9c7688ea906772770383a8f566df0538c3d1372b7bbc9b62662fe67ca09a8dc9",
+      "status": "same",
+      "publication_sha256": "9c7688ea906772770383a8f566df0538c3d1372b7bbc9b62662fe67ca09a8dc9"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/executor.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/executor.md",
+      "sha256": "0776e61baf0d2e40e9bc6a5ba49e51b9447f191b463d2ad3356160a56a47a716",
+      "status": "same",
+      "publication_sha256": "0776e61baf0d2e40e9bc6a5ba49e51b9447f191b463d2ad3356160a56a47a716"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/implementer-pre-push.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/implementer-pre-push.md",
+      "sha256": "6cebb132a38676537819e37715a490e4e6ef497d91f83b9ba9907af0e195de2f",
+      "status": "same",
+      "publication_sha256": "6cebb132a38676537819e37715a490e4e6ef497d91f83b9ba9907af0e195de2f"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/judge.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/judge.md",
+      "sha256": "f376f448cbefd8f5cd9f93db0e99be2afd6dfcfa0e35f614a600114b438e334c",
+      "status": "same",
+      "publication_sha256": "f376f448cbefd8f5cd9f93db0e99be2afd6dfcfa0e35f614a600114b438e334c"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/local-rehearsal.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/local-rehearsal.md",
+      "sha256": "bef30664f4663ca1aad7d1d28cdd9c3b169da3da8bc98896673879ee916b0764",
+      "status": "same",
+      "publication_sha256": "bef30664f4663ca1aad7d1d28cdd9c3b169da3da8bc98896673879ee916b0764"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/manager.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/manager.md",
+      "sha256": "5422b9582a48552673509e01c61fc4e2a140e4c837533975be9db132612b3cdb",
+      "status": "same",
+      "publication_sha256": "5422b9582a48552673509e01c61fc4e2a140e4c837533975be9db132612b3cdb"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/planner.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/planner.md",
+      "sha256": "416b1b0ea4cebc19e4776215d903ad444dd5bbcd3449ea7ab77135af48b009b2",
+      "status": "same",
+      "publication_sha256": "416b1b0ea4cebc19e4776215d903ad444dd5bbcd3449ea7ab77135af48b009b2"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/preflight-auditor.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/preflight-auditor.md",
+      "sha256": "c5f16c06631b2815adccfcf9baf07096aa0289547393ccc01b34315a1636f182",
+      "status": "same",
+      "publication_sha256": "c5f16c06631b2815adccfcf9baf07096aa0289547393ccc01b34315a1636f182"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/researcher.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/researcher.md",
+      "sha256": "de71ee77daf7a28cf1044cd54883efc0b4312d6c9bd4d5081c915879527ed21d",
+      "status": "same",
+      "publication_sha256": "de71ee77daf7a28cf1044cd54883efc0b4312d6c9bd4d5081c915879527ed21d"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/test-writer.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/test-writer.md",
+      "sha256": "e9ce3e4f0fa89041786cfa8a3b694ca50917f2ed6570df591f6e4343415bc02f",
+      "status": "same",
+      "publication_sha256": "e9ce3e4f0fa89041786cfa8a3b694ca50917f2ed6570df591f6e4343415bc02f"
+    },
+    {
+      "archive": "products/permit/.pipelines/roles/verifier.md",
+      "repo": "permit",
+      "path": ".pipelines/roles/verifier.md",
+      "sha256": "f30177313c45c0a57c1de203c045567fa06ad48927e0dec44f93498b52ed1e90",
+      "status": "same",
+      "publication_sha256": "f30177313c45c0a57c1de203c045567fa06ad48927e0dec44f93498b52ed1e90"
+    },
+    {
+      "archive": "products/permit/.pipelines/scope-lock-template.yaml",
+      "repo": "permit",
+      "path": ".pipelines/scope-lock-template.yaml",
+      "sha256": "c94aaee7da8bffcad68d77e8448998a7cd3c921e9e2713689c18d520f1db753e",
+      "status": "same",
+      "publication_sha256": "8720839903dc32d5f09e5567e99e75639453b810c71c5533cbe868e184e8b9e3"
+    },
+    {
+      "archive": "products/permit/.pipelines/self-classification-rules.md",
+      "repo": "permit",
+      "path": ".pipelines/self-classification-rules.md",
+      "sha256": "a1b5e293e4def3a5a1b1df9db82ed32941689a7b630f64b420fbe38e69adef23",
+      "status": "same",
+      "publication_sha256": "a1b5e293e4def3a5a1b1df9db82ed32941689a7b630f64b420fbe38e69adef23"
+    },
+    {
+      "archive": "products/permit/.pipelines/templates/5-lens-self-audit-template.md",
+      "repo": "permit",
+      "path": ".pipelines/templates/5-lens-self-audit-template.md",
+      "sha256": "a8b0ca1496883b1943959eadd7683e5c3a6ec49d091d1869730d22ae54e19812",
+      "status": "same",
+      "publication_sha256": "a8b0ca1496883b1943959eadd7683e5c3a6ec49d091d1869730d22ae54e19812"
+    },
+    {
+      "archive": "products/permit/.pipelines/templates/AGENTS.md",
+      "repo": "permit",
+      "path": ".pipelines/templates/AGENTS.md",
+      "sha256": "9074a44f5b17cc01039c0a4547c7808bb3ebcb3c64c39ac584d7a151aa7253f3",
+      "status": "same",
+      "publication_sha256": "9074a44f5b17cc01039c0a4547c7808bb3ebcb3c64c39ac584d7a151aa7253f3"
+    },
+    {
+      "archive": "products/permit/.pipelines/templates/audit-gate-template.md",
+      "repo": "permit",
+      "path": ".pipelines/templates/audit-gate-template.md",
+      "sha256": "77f4d7fe63a0cf1ad557dae27f398b723dfbc3cd7269a86d071073080d34a20b",
+      "status": "same",
+      "publication_sha256": "77f4d7fe63a0cf1ad557dae27f398b723dfbc3cd7269a86d071073080d34a20b"
+    },
+    {
+      "archive": "products/permit/.pipelines/templates/audit-protocol-template.md",
+      "repo": "permit",
+      "path": ".pipelines/templates/audit-protocol-template.md",
+      "sha256": "7cc7b81ff5842052ecdb1770210cdf85504286b604e20ebc10e9b157e7725b05",
+      "status": "same",
+      "publication_sha256": "7cc7b81ff5842052ecdb1770210cdf85504286b604e20ebc10e9b157e7725b05"
+    },
+    {
+      "archive": "products/permit/.pipelines/templates/workflow-cost-directives.md",
+      "repo": "permit",
+      "path": ".pipelines/templates/workflow-cost-directives.md",
+      "sha256": "362019a12e3f48d7e873a78ff829fbf206227edb0d3033f9d28e5d553e0904d1",
+      "status": "same",
+      "publication_sha256": "362019a12e3f48d7e873a78ff829fbf206227edb0d3033f9d28e5d553e0904d1"
+    },
+    {
+      "archive": "products/permit/AGENTS.md",
+      "repo": "permit",
+      "path": "AGENTS.md",
+      "sha256": "5a7c5358503ae5d16d25c41085a11ef63dd0e1b762f8a1907a76424279638c79",
+      "status": "changed",
+      "publication_sha256": "0e6f27de05f5713728fa6265427c4f9d97359db1191b4ac38c75d49f382af13b"
+    },
+    {
+      "archive": "products/permit/CHANGELOG.md",
+      "repo": "permit",
+      "path": "CHANGELOG.md",
+      "sha256": "0a99b18d943ca30edc35b96826dce618fb256cf3a7ae352fd52fb27bf6a8b022",
+      "status": "same",
+      "publication_sha256": "0a99b18d943ca30edc35b96826dce618fb256cf3a7ae352fd52fb27bf6a8b022"
+    },
+    {
+      "archive": "products/permit/CODE_OF_CONDUCT.md",
+      "repo": "permit",
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "ae1f714e474348a007e3ce6da69f7b8549b862664d90a35e5aa87cdc485222a9",
+      "status": "same",
+      "publication_sha256": "ae1f714e474348a007e3ce6da69f7b8549b862664d90a35e5aa87cdc485222a9"
+    },
+    {
+      "archive": "products/permit/CONTRIBUTING.md",
+      "repo": "permit",
+      "path": "CONTRIBUTING.md",
+      "sha256": "02ab89161dc28beeafbc2e5d7a456dca67af6b9d1bcef5a870e1ec5e1851ca2c",
+      "status": "same",
+      "publication_sha256": "02ab89161dc28beeafbc2e5d7a456dca67af6b9d1bcef5a870e1ec5e1851ca2c"
+    },
+    {
+      "archive": "products/permit/LICENSE",
+      "repo": "permit",
+      "path": "LICENSE",
+      "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/permit/LICENSE-CODE",
+      "repo": "permit",
+      "path": "LICENSE-CODE",
+      "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
+      "status": "changed",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/permit/LICENSE-DOCS",
+      "repo": "permit",
+      "path": "LICENSE-DOCS",
+      "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/permit/MILESTONE_0_7_DONE.md",
+      "repo": "permit",
+      "path": "MILESTONE_0_7_DONE.md",
+      "sha256": "3dc05d5e93d2771481c7d0085b6409db9848eab9acb2a0353ea02e144d60c02c",
+      "status": "same",
+      "publication_sha256": "3dc05d5e93d2771481c7d0085b6409db9848eab9acb2a0353ea02e144d60c02c"
+    },
+    {
+      "archive": "products/permit/PRODUCTION_DEPTH_INTAKE_PERSISTENCE_DONE.md",
+      "repo": "permit",
+      "path": "PRODUCTION_DEPTH_INTAKE_PERSISTENCE_DONE.md",
+      "sha256": "50fa99eaec00a5496c42301f08dd38b43e2425a55e304a260c2188132558e08d",
+      "status": "same",
+      "publication_sha256": "50fa99eaec00a5496c42301f08dd38b43e2425a55e304a260c2188132558e08d"
+    },
+    {
+      "archive": "products/permit/README.md",
+      "repo": "permit",
+      "path": "README.md",
+      "sha256": "32bc5717109156d5859be2a39140045cfdae831694ac147612864644b41b1a06",
+      "status": "changed",
+      "publication_sha256": "109ed7bcddd71c9028a880a11fe85d3b2e603e1daa6adf3b6d079428aae7e089"
+    },
+    {
+      "archive": "products/permit/README.txt",
+      "repo": "permit",
+      "path": "README.txt",
+      "sha256": "32bc5717109156d5859be2a39140045cfdae831694ac147612864644b41b1a06",
+      "status": "changed",
+      "publication_sha256": "109ed7bcddd71c9028a880a11fe85d3b2e603e1daa6adf3b6d079428aae7e089"
+    },
+    {
+      "archive": "products/permit/SECURITY.md",
+      "repo": "permit",
+      "path": "SECURITY.md",
+      "sha256": "305be760fe85697bd5c6e5c6c1dee4f84b34d0646bbc76db4e5b6125256fb7cc",
+      "status": "same",
+      "publication_sha256": "8bdbc72fb8f40a5338d4d5a9ce1472da184530c25271c028ee172279031f1359"
+    },
+    {
+      "archive": "products/permit/SUPPORT.md",
+      "repo": "permit",
+      "path": "SUPPORT.md",
+      "sha256": "09c19a5e245c0f18ac8b771ec9ae120e5917d1a32a1772d17e46f2d7cac18728",
+      "status": "same",
+      "publication_sha256": "09c19a5e245c0f18ac8b771ec9ae120e5917d1a32a1772d17e46f2d7cac18728"
+    },
+    {
+      "archive": "products/permit/USER-MANUAL.md",
+      "repo": "permit",
+      "path": "USER-MANUAL.md",
+      "sha256": "5a240d1883d28ca30c1165e717389689b70f1bbb1a1ac6bc4b3bc9bc111526fd",
+      "status": "same",
+      "publication_sha256": "1b63af96c67a0dd81defcb17793575e2cbb0ebbd5c36a25a86a37acda2182757"
+    },
+    {
+      "archive": "products/permit/USER-MANUAL.txt",
+      "repo": "permit",
+      "path": "USER-MANUAL.txt",
+      "sha256": "5a240d1883d28ca30c1165e717389689b70f1bbb1a1ac6bc4b3bc9bc111526fd",
+      "status": "same",
+      "publication_sha256": "1b63af96c67a0dd81defcb17793575e2cbb0ebbd5c36a25a86a37acda2182757"
+    },
+    {
+      "archive": "products/permit/civicpermit/__init__.py",
+      "repo": "permit",
+      "path": "civicpermit/__init__.py",
+      "sha256": "a5b97430c7d8d5cfff984857fe16a7c72868d652340640cb9bdcdfe39ddb209c",
+      "status": "changed",
+      "publication_sha256": "5838eeebe8c0666675489d91e5ea0a05fd47a09cf897e26ed5863a6c55515ea8"
+    },
+    {
+      "archive": "products/permit/civicpermit/connections.py",
+      "repo": "permit",
+      "path": "civicpermit/connections.py",
+      "sha256": "4159a4eb4a407bebbefeb49bb760788cff3ac51a45c34af094d3be4b5a746798",
+      "status": "same",
+      "publication_sha256": "4159a4eb4a407bebbefeb49bb760788cff3ac51a45c34af094d3be4b5a746798"
+    },
+    {
+      "archive": "products/permit/civicpermit/intake_review.py",
+      "repo": "permit",
+      "path": "civicpermit/intake_review.py",
+      "sha256": "694f531a12e56c283579e92f85651d08da776e916021ab19f4d7108c3120b41d",
+      "status": "same",
+      "publication_sha256": "694f531a12e56c283579e92f85651d08da776e916021ab19f4d7108c3120b41d"
+    },
+    {
+      "archive": "products/permit/civicpermit/integration_mocks.py",
+      "repo": "permit",
+      "path": "civicpermit/integration_mocks.py",
+      "sha256": "d1f1b614d502ada64a87d879703e9afa72402b69e8df5a1cf25cbd78f783e111",
+      "status": "same",
+      "publication_sha256": "d1f1b614d502ada64a87d879703e9afa72402b69e8df5a1cf25cbd78f783e111"
+    },
+    {
+      "archive": "products/permit/civicpermit/main.py",
+      "repo": "permit",
+      "path": "civicpermit/main.py",
+      "sha256": "d1186d8d291225cfff5dc66e40ab435d899d8a059506a6be6f3b413b7a5c8b90",
+      "status": "changed",
+      "publication_sha256": "c34b06d55662b640998369504d6bf039f6b8c1dd20908f04049ebc7e9c74fde5"
+    },
+    {
+      "archive": "products/permit/civicpermit/migrations/__init__.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/__init__.py",
+      "sha256": "01c6b95137260717ee792116a0479392b3f2da330542c55dbd181c4a93d404a3",
+      "status": "same",
+      "publication_sha256": "01c6b95137260717ee792116a0479392b3f2da330542c55dbd181c4a93d404a3"
+    },
+    {
+      "archive": "products/permit/civicpermit/migrations/env.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/env.py",
+      "sha256": "91715ad26e140d1b25b30ad38b3418d36ea63da4a195348aa5fe621c99edbe5e",
+      "status": "same",
+      "publication_sha256": "91715ad26e140d1b25b30ad38b3418d36ea63da4a195348aa5fe621c99edbe5e"
+    },
+    {
+      "archive": "products/permit/civicpermit/migrations/versions/civicpermit_0001_connected.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/versions/civicpermit_0001_connected.py",
+      "sha256": "e3fc90959836887334b429888407537140fa2d119c202886b63c538feb4e9360",
+      "status": "same",
+      "publication_sha256": "e3fc90959836887334b429888407537140fa2d119c202886b63c538feb4e9360"
+    },
+    {
+      "archive": "products/permit/civicpermit/pathway.py",
+      "repo": "permit",
+      "path": "civicpermit/pathway.py",
+      "sha256": "b1e311809d61f4efab043c681efa9d711d5bf4bf76b5f33f808c1769e3687d08",
+      "status": "new",
+      "publication_sha256": "143b44f61f03b20f0ac8c87f42d04a8b17d9a672d212b7c5fd8f82f2f452c271"
+    },
+    {
+      "archive": "products/permit/civicpermit/persistence.py",
+      "repo": "permit",
+      "path": "civicpermit/persistence.py",
+      "sha256": "cea7301cde02497e65601351e58100b3211cf79e85e3036f251107f7d21fe95b",
+      "status": "same",
+      "publication_sha256": "cea7301cde02497e65601351e58100b3211cf79e85e3036f251107f7d21fe95b"
+    },
+    {
+      "archive": "products/permit/civicpermit/public_ui.py",
+      "repo": "permit",
+      "path": "civicpermit/public_ui.py",
+      "sha256": "0f06685bd18b171987cc08413bc930112f400a03468c0f27e98badba6b732f29",
+      "status": "changed",
+      "publication_sha256": "0f06685bd18b171987cc08413bc930112f400a03468c0f27e98badba6b732f29"
+    },
+    {
+      "archive": "products/permit/civicpermit/records_export.py",
+      "repo": "permit",
+      "path": "civicpermit/records_export.py",
+      "sha256": "231801e8bd30b92f0fe6aeb0a8f2aed2d5097acae5f2cc5eda2e18f9c9a1fae8",
+      "status": "same",
+      "publication_sha256": "231801e8bd30b92f0fe6aeb0a8f2aed2d5097acae5f2cc5eda2e18f9c9a1fae8"
+    },
+    {
+      "archive": "products/permit/civicpermit/requirement_lookup.py",
+      "repo": "permit",
+      "path": "civicpermit/requirement_lookup.py",
+      "sha256": "f9a1fbd111096e7d4c00cc6cb7f25b9cf91af522f26c743f86234a0ecffe783c",
+      "status": "same",
+      "publication_sha256": "f9a1fbd111096e7d4c00cc6cb7f25b9cf91af522f26c743f86234a0ecffe783c"
+    },
+    {
+      "archive": "products/permit/civicpermit/sources.py",
+      "repo": "permit",
+      "path": "civicpermit/sources.py",
+      "sha256": "8e26b8c98635689f985e14d57a0137f6538145c50414da918ba0cb41a7f489a3",
+      "status": "new",
+      "publication_sha256": "8e26b8c98635689f985e14d57a0137f6538145c50414da918ba0cb41a7f489a3"
+    },
+    {
+      "archive": "products/permit/civicpermit/submittal_outline.py",
+      "repo": "permit",
+      "path": "civicpermit/submittal_outline.py",
+      "sha256": "f6465de3058d51bb47b7d278e10b67a2ac1ac46aeefa2563eabd041dcb54aae1",
+      "status": "same",
+      "publication_sha256": "f6465de3058d51bb47b7d278e10b67a2ac1ac46aeefa2563eabd041dcb54aae1"
+    },
+    {
+      "archive": "products/permit/civicpermit/workflow_models.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_models.py",
+      "sha256": "3d09f3ae137c5c48091e22a60a3e732ea3ec299236778d377df55807bb8bbfdd",
+      "status": "changed",
+      "publication_sha256": "3d09f3ae137c5c48091e22a60a3e732ea3ec299236778d377df55807bb8bbfdd"
+    },
+    {
+      "archive": "products/permit/civicpermit/workflow_schema.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_schema.py",
+      "sha256": "07dfc3dfafd5131ffee8b087add38fd7ebf446c2cf104100920636e732aaee59",
+      "status": "same",
+      "publication_sha256": "07dfc3dfafd5131ffee8b087add38fd7ebf446c2cf104100920636e732aaee59"
+    },
+    {
+      "archive": "products/permit/civicpermit/workflow_store.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_store.py",
+      "sha256": "c3415dd94aaed609a593d28b60d0719f2dc1a504a5f15391d9708714038ea259",
+      "status": "changed",
+      "publication_sha256": "c3415dd94aaed609a593d28b60d0719f2dc1a504a5f15391d9708714038ea259"
+    },
+    {
+      "archive": "products/permit/docs/IMPLEMENTATION_PLAN.md",
+      "repo": "permit",
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "sha256": "22c5aa8f706675804eff9be7a30501459268129c08d09ddf9cac564beb440d89",
+      "status": "same",
+      "publication_sha256": "22c5aa8f706675804eff9be7a30501459268129c08d09ddf9cac564beb440d89"
+    },
+    {
+      "archive": "products/permit/docs/MILESTONES.md",
+      "repo": "permit",
+      "path": "docs/MILESTONES.md",
+      "sha256": "3a3102198457ae7b4fe5eb1a59da5f9c8434f6e1d3d09776fc95af506804b393",
+      "status": "same",
+      "publication_sha256": "3a3102198457ae7b4fe5eb1a59da5f9c8434f6e1d3d09776fc95af506804b393"
+    },
+    {
+      "archive": "products/permit/docs/RECONCILIATION.md",
+      "repo": "permit",
+      "path": "docs/RECONCILIATION.md",
+      "sha256": "7d8614329f9579fa0ff8319d0e48e066076ace1649168e3d42756a1274173ced",
+      "status": "same",
+      "publication_sha256": "7d8614329f9579fa0ff8319d0e48e066076ace1649168e3d42756a1274173ced"
+    },
+    {
+      "archive": "products/permit/docs/audits/civicpermit-audit-full-2026-05-07.md",
+      "repo": "permit",
+      "path": "docs/audits/civicpermit-audit-full-2026-05-07.md",
+      "sha256": "e21af7d887fee0f129ea0ebc80f29595b4ef2e17b3a6b81113b5b456a3d3f2d0",
+      "status": "same",
+      "publication_sha256": "e21af7d887fee0f129ea0ebc80f29595b4ef2e17b3a6b81113b5b456a3d3f2d0"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-civicpermit-release-recovery-summary.md",
+      "repo": "permit",
+      "path": "docs/browser-qa-civicpermit-release-recovery-summary.md",
+      "sha256": "a5acda2be9835cc1c14208e52f5f29f7d16b6594c6bbab96cd87d62c4a4ba407",
+      "status": "same",
+      "publication_sha256": "a5acda2be9835cc1c14208e52f5f29f7d16b6594c6bbab96cd87d62c4a4ba407"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-civicpermit-v0.1.1-alignment-summary.md",
+      "repo": "permit",
+      "path": "docs/browser-qa-civicpermit-v0.1.1-alignment-summary.md",
+      "sha256": "7d1ce09f1f7410e929a8465d1cba2c16b895b11634b9eb077aa5a3bd44ca418b",
+      "status": "same",
+      "publication_sha256": "7d1ce09f1f7410e929a8465d1cba2c16b895b11634b9eb077aa5a3bd44ca418b"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-civicpermit-v0.1.2-intake-gates-summary.md",
+      "repo": "permit",
+      "path": "docs/browser-qa-civicpermit-v0.1.2-intake-gates-summary.md",
+      "sha256": "a0b932af01e0157e8ed374dc1edc118c3fd034d048a51f041e601d8f19c0b79c",
+      "status": "same",
+      "publication_sha256": "a0b932af01e0157e8ed374dc1edc118c3fd034d048a51f041e601d8f19c0b79c"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-civicpermit-v1.0.0-evidence.json",
+      "repo": "permit",
+      "path": "docs/browser-qa-civicpermit-v1.0.0-evidence.json",
+      "sha256": "395ced486afeadbe96eb2123f93ee48147b2b68fc9adadfd664d21e33464c98c",
+      "status": "same",
+      "publication_sha256": "886ceafbe56f5e8e33905b805beee2e785f0c283b4de07c275c59c07fcc44ea5"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-civicpermit-v1.0.0-summary.md",
+      "repo": "permit",
+      "path": "docs/browser-qa-civicpermit-v1.0.0-summary.md",
+      "sha256": "ba65e3193838076551a5cae73d6cc64690731f1a167e05f1ea3da7d649874ef0",
+      "status": "same",
+      "publication_sha256": "ba65e3193838076551a5cae73d6cc64690731f1a167e05f1ea3da7d649874ef0"
+    },
+    {
+      "archive": "products/permit/docs/browser-qa-production-depth-intake-persistence-summary.md",
+      "repo": "permit",
+      "path": "docs/browser-qa-production-depth-intake-persistence-summary.md",
+      "sha256": "016150d3addacb23b81117c9a4b655243342ad9a267f8f41671123bd73065a67",
+      "status": "same",
+      "publication_sha256": "016150d3addacb23b81117c9a4b655243342ad9a267f8f41671123bd73065a67"
+    },
+    {
+      "archive": "products/permit/docs/careful-coding-civicpermit-v1.0.0.md",
+      "repo": "permit",
+      "path": "docs/careful-coding-civicpermit-v1.0.0.md",
+      "sha256": "0e054a0cb567e21a9feda9f8b140e9405749b098fa1c28fab2d82d7b9e806a26",
+      "status": "same",
+      "publication_sha256": "0e054a0cb567e21a9feda9f8b140e9405749b098fa1c28fab2d82d7b9e806a26"
+    },
+    {
+      "archive": "products/permit/docs/connected-workflow.md",
+      "repo": "permit",
+      "path": "docs/connected-workflow.md",
+      "sha256": "eb6d055d8622f42c01658d9db9474bb959732f35b8b086ca042429c17a56ff29",
+      "status": "same",
+      "publication_sha256": "eb6d055d8622f42c01658d9db9474bb959732f35b8b086ca042429c17a56ff29"
+    },
+    {
+      "archive": "products/permit/docs/github-discussions-seed.md",
+      "repo": "permit",
+      "path": "docs/github-discussions-seed.md",
+      "sha256": "da3dbcc71da30ce893c06e2be5a9bc801c51e1fa08e98f3489b972b5ec9f5775",
+      "status": "same",
+      "publication_sha256": "da3dbcc71da30ce893c06e2be5a9bc801c51e1fa08e98f3489b972b5ec9f5775"
+    },
+    {
+      "archive": "products/permit/docs/index.html",
+      "repo": "permit",
+      "path": "docs/index.html",
+      "sha256": "e8afeb6ebbe652050a7ac21e573293407c037bbff9f8a2a0741eabbd27df3a07",
+      "status": "changed",
+      "publication_sha256": "c13e4b472aee31bfb7533e3dfbdda8b903ef7568736f197b2d6c4b83026f1613"
+    },
+    {
+      "archive": "products/permit/docs/licensing/README.md",
+      "repo": "permit",
+      "path": "docs/licensing/README.md",
+      "sha256": "31f03641dce7f8ac15ae03715dd93f5f5357543204232d0beefe0f73fcc678ba",
+      "status": "new",
+      "publication_sha256": "df2b5eb76d649fbe3792ccbfa3ea7615f2c417294793a399f6e76fd98e2bd295"
+    },
+    {
+      "archive": "products/permit/docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "repo": "permit",
+      "path": "docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef",
+      "status": "new",
+      "publication_sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef"
+    },
+    {
+      "archive": "products/permit/docs/qa/current-civicpermit-release-qa.md",
+      "repo": "permit",
+      "path": "docs/qa/current-civicpermit-release-qa.md",
+      "sha256": "9528b3347878311d9cf5b30c4057c93cb9ae43a8a06d0da4748dcba28b5d861c",
+      "status": "same",
+      "publication_sha256": "9528b3347878311d9cf5b30c4057c93cb9ae43a8a06d0da4748dcba28b5d861c"
+    },
+    {
+      "archive": "products/permit/docs/qa/current-civicpermit-release-qa/summary.json",
+      "repo": "permit",
+      "path": "docs/qa/current-civicpermit-release-qa/summary.json",
+      "sha256": "98416eb87127bae7912008ee7b41fb0421042f9d23376a270d02423ced0bc419",
+      "status": "same",
+      "publication_sha256": "3f515396ea8aec68c33dcb677b92145d29b72e339c2c2a9209ff710102c677fa"
+    },
+    {
+      "archive": "products/permit/docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "repo": "permit",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/permit/docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "repo": "permit",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/permit/docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "repo": "permit",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "sha256": "92f4777aecc4d3baff0e9b83846c5a5f207712d281c2e4d4049fbd85514cd136",
+      "status": "same",
+      "publication_sha256": "92f4777aecc4d3baff0e9b83846c5a5f207712d281c2e4d4049fbd85514cd136"
+    },
+    {
+      "archive": "products/permit/docs/release-gate-audit-civicpermit-v1.0.0.md",
+      "repo": "permit",
+      "path": "docs/release-gate-audit-civicpermit-v1.0.0.md",
+      "sha256": "57573ba58857e43479cf43259f9a142742bfdf27ee5c6cf28ff67fd984217497",
+      "status": "same",
+      "publication_sha256": "57573ba58857e43479cf43259f9a142742bfdf27ee5c6cf28ff67fd984217497"
+    },
+    {
+      "archive": "products/permit/docs/release-integrity-correction-2026-05-21.md",
+      "repo": "permit",
+      "path": "docs/release-integrity-correction-2026-05-21.md",
+      "sha256": "91463b105ffdf0acecdbae5576d8fab0386139bd94a1d48d1a11cf59bcf8e59e",
+      "status": "same",
+      "publication_sha256": "91463b105ffdf0acecdbae5576d8fab0386139bd94a1d48d1a11cf59bcf8e59e"
+    },
+    {
+      "archive": "products/permit/docs/release-recovery-status.md",
+      "repo": "permit",
+      "path": "docs/release-recovery-status.md",
+      "sha256": "a97a868c6c75b1ce0fd4ee82b4fde9cbf711d7733105a3658f0cabef7e039908",
+      "status": "same",
+      "publication_sha256": "a97a868c6c75b1ce0fd4ee82b4fde9cbf711d7733105a3658f0cabef7e039908"
+    },
+    {
+      "archive": "products/permit/patch_async_tests.py",
+      "repo": "permit",
+      "path": "patch_async_tests.py",
+      "sha256": "b85c3bc7e5c146700a0754c9d4c64c2b16350037a99fa2b355703d3f3f74ddaf",
+      "status": "new",
+      "publication_sha256": "b85c3bc7e5c146700a0754c9d4c64c2b16350037a99fa2b355703d3f3f74ddaf"
+    },
+    {
+      "archive": "products/permit/patch_pathway_routes.py",
+      "repo": "permit",
+      "path": "patch_pathway_routes.py",
+      "sha256": "6c1a4dd6f06b7bfce413c43f7d66aebe64754dd49ec2e7325395e65f06d179c7",
+      "status": "new",
+      "publication_sha256": "6c1a4dd6f06b7bfce413c43f7d66aebe64754dd49ec2e7325395e65f06d179c7"
+    },
+    {
+      "archive": "products/permit/patch_public_ui_test.py",
+      "repo": "permit",
+      "path": "patch_public_ui_test.py",
+      "sha256": "5317dcc3b9038bb501b7d9cebe9155de8950f2635dcf4ff560c8673ceb06c357",
+      "status": "new",
+      "publication_sha256": "5317dcc3b9038bb501b7d9cebe9155de8950f2635dcf4ff560c8673ceb06c357"
+    },
+    {
+      "archive": "products/permit/patch_test_order.py",
+      "repo": "permit",
+      "path": "patch_test_order.py",
+      "sha256": "ab1a00c7bdae02c3afdc8d2ac4ddadcee56abc70183dde3e0d93ab364af24fc0",
+      "status": "new",
+      "publication_sha256": "ab1a00c7bdae02c3afdc8d2ac4ddadcee56abc70183dde3e0d93ab364af24fc0"
+    },
+    {
+      "archive": "products/permit/pyproject.toml",
+      "repo": "permit",
+      "path": "pyproject.toml",
+      "sha256": "9b619bb4d9163101aa868ae6b8e2e07d5e56a9e370473e4e72fe9eab9862f644",
+      "status": "same",
+      "publication_sha256": "10c8f4fb36fa6e7edf3833ddd1c8b089f243f94171f3b68402293b05d25efa91"
+    },
+    {
+      "archive": "products/permit/scripts/check-civiccore-placeholder-imports.py",
+      "repo": "permit",
+      "path": "scripts/check-civiccore-placeholder-imports.py",
+      "sha256": "c77ca3f5aabdcf0259b74d9f16b7f2e36b5e0b5d85428d4f02d5c5ac12ecc4f5",
+      "status": "changed",
+      "publication_sha256": "bd06630938b9fcb61090d6986fef62a33ddb84d504e89a5b75b230a863edf983"
+    },
+    {
+      "archive": "products/permit/scripts/policy/__init__.py",
+      "repo": "permit",
+      "path": "scripts/policy/__init__.py",
+      "sha256": "fe860d71e3b5d8d82c3982f4ff4d49f7b9471b7d966444387e4524665a455c10",
+      "status": "same",
+      "publication_sha256": "fe860d71e3b5d8d82c3982f4ff4d49f7b9471b7d966444387e4524665a455c10"
+    },
+    {
+      "archive": "products/permit/scripts/policy/agent_decision_gate.py",
+      "repo": "permit",
+      "path": "scripts/policy/agent_decision_gate.py",
+      "sha256": "a5fb9a534853b90249e362a849ef571f60067db6081064ff517f71f62ad98b3c",
+      "status": "same",
+      "publication_sha256": "a5fb9a534853b90249e362a849ef571f60067db6081064ff517f71f62ad98b3c"
+    },
+    {
+      "archive": "products/permit/scripts/policy/auto_promote.py",
+      "repo": "permit",
+      "path": "scripts/policy/auto_promote.py",
+      "sha256": "587a683b1aa5b882331130e8b3efa1429961c29e3e3e0262540d4503202e013b",
+      "status": "same",
+      "publication_sha256": "587a683b1aa5b882331130e8b3efa1429961c29e3e3e0262540d4503202e013b"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_actions_budget.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_actions_budget.py",
+      "sha256": "a5a01878dc184c8ad9fce6c720ca7ebcb884bef9a4b8f8cd41798291e760b8b5",
+      "status": "same",
+      "publication_sha256": "a5a01878dc184c8ad9fce6c720ca7ebcb884bef9a4b8f8cd41798291e760b8b5"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_adr_gate.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_adr_gate.py",
+      "sha256": "ab35e8a93ac9e56cfffb4363a51009cba22e1324c2d647afbfa350cbff85c4f0",
+      "status": "same",
+      "publication_sha256": "ab35e8a93ac9e56cfffb4363a51009cba22e1324c2d647afbfa350cbff85c4f0"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_allowed_paths.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_allowed_paths.py",
+      "sha256": "8cfceb5c3cd96d11319fc5c90fa2159a05f4f1cdac6662051de35768da86780a",
+      "status": "same",
+      "publication_sha256": "8cfceb5c3cd96d11319fc5c90fa2159a05f4f1cdac6662051de35768da86780a"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_decision_ledger.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_decision_ledger.py",
+      "sha256": "5ec2383b3bbb22a8a38c12fe2483290fc7411b492ba7f7fa6bdab31b6ad765e0",
+      "status": "same",
+      "publication_sha256": "5ec2383b3bbb22a8a38c12fe2483290fc7411b492ba7f7fa6bdab31b6ad765e0"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_directive_conformance.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_directive_conformance.py",
+      "sha256": "fee2961c1f115f3b5157e92d76425be52a3b7c8a7b1b716d0f76d6cf228190b7",
+      "status": "same",
+      "publication_sha256": "fee2961c1f115f3b5157e92d76425be52a3b7c8a7b1b716d0f76d6cf228190b7"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_execute_readiness.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_execute_readiness.py",
+      "sha256": "135daf346b24b5732737ac861ac1738e6c8b7fec7cd6ff96547783695467047c",
+      "status": "same",
+      "publication_sha256": "135daf346b24b5732737ac861ac1738e6c8b7fec7cd6ff96547783695467047c"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_manifest_schema.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_manifest_schema.py",
+      "sha256": "4085d00b4bb6a08cea8e5b7ce2f14272d7fcdbb484f779bcd4d18b860de701a3",
+      "status": "same",
+      "publication_sha256": "4085d00b4bb6a08cea8e5b7ce2f14272d7fcdbb484f779bcd4d18b860de701a3"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_no_todos.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_no_todos.py",
+      "sha256": "3e4a4755c3b7cb22d8ba3795f9fe294d0dd39780dbd7731765937a61ffc55a1c",
+      "status": "same",
+      "publication_sha256": "3e4a4755c3b7cb22d8ba3795f9fe294d0dd39780dbd7731765937a61ffc55a1c"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_pipeline_control_loop.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_pipeline_control_loop.py",
+      "sha256": "933af34fc5140cd03670f7c01a3da9d053d14c31618a46d299380bb65ccf3cfb",
+      "status": "same",
+      "publication_sha256": "933af34fc5140cd03670f7c01a3da9d053d14c31618a46d299380bb65ccf3cfb"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_plan_against_directive.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_plan_against_directive.py",
+      "sha256": "2e811cd097da03f922b8a29b1916ced1b8059313d5edcd8e581cb98c420518d8",
+      "status": "same",
+      "publication_sha256": "2e811cd097da03f922b8a29b1916ced1b8059313d5edcd8e581cb98c420518d8"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_plugin_install_acceptance.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_plugin_install_acceptance.py",
+      "sha256": "685c032c51e9eef56783f5aa374be4c31c15abb5a6bd0479a5f97648c537bf37",
+      "status": "same",
+      "publication_sha256": "685c032c51e9eef56783f5aa374be4c31c15abb5a6bd0479a5f97648c537bf37"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_release_docs_consistency.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_release_docs_consistency.py",
+      "sha256": "fe00ef16e86e5aebb52035475933678b706be58fdd7690e475c63b793a6a1cc6",
+      "status": "same",
+      "publication_sha256": "fe00ef16e86e5aebb52035475933678b706be58fdd7690e475c63b793a6a1cc6"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_rung_file_ownership.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_rung_file_ownership.py",
+      "sha256": "aeb80fdc31bd0d06f309328a5d5ae15b0b668488213eaa15a4476286d553f79d",
+      "status": "same",
+      "publication_sha256": "aeb80fdc31bd0d06f309328a5d5ae15b0b668488213eaa15a4476286d553f79d"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_scope_lock.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_scope_lock.py",
+      "sha256": "d64e6bd5a7ed3e14d14ff434390dea5fe5ead1fe92959694a8be325db0626992",
+      "status": "same",
+      "publication_sha256": "d64e6bd5a7ed3e14d14ff434390dea5fe5ead1fe92959694a8be325db0626992"
+    },
+    {
+      "archive": "products/permit/scripts/policy/check_skill_packaging.py",
+      "repo": "permit",
+      "path": "scripts/policy/check_skill_packaging.py",
+      "sha256": "88460d46f549eb4038fdf96aceefc0d53ed25db5e16552185d1e0c641143d681",
+      "status": "same",
+      "publication_sha256": "88460d46f549eb4038fdf96aceefc0d53ed25db5e16552185d1e0c641143d681"
+    },
+    {
+      "archive": "products/permit/scripts/policy/directive_utils.py",
+      "repo": "permit",
+      "path": "scripts/policy/directive_utils.py",
+      "sha256": "115bb513bf32d8bb21a52566385010b1a878729fb3dff30365bbb40514a6287c",
+      "status": "same",
+      "publication_sha256": "115bb513bf32d8bb21a52566385010b1a878729fb3dff30365bbb40514a6287c"
+    },
+    {
+      "archive": "products/permit/scripts/policy/final_response_gate.py",
+      "repo": "permit",
+      "path": "scripts/policy/final_response_gate.py",
+      "sha256": "da1f55fe0fd8e92e8550c7503e69d5ec83064a2c70bc93194bc3aa56670cba0b",
+      "status": "same",
+      "publication_sha256": "da1f55fe0fd8e92e8550c7503e69d5ec83064a2c70bc93194bc3aa56670cba0b"
+    },
+    {
+      "archive": "products/permit/scripts/policy/pipeline_continue.py",
+      "repo": "permit",
+      "path": "scripts/policy/pipeline_continue.py",
+      "sha256": "f237a8ec107feef567bec214ec370ae837f09fd7033f4d543dd90d4fa0502dad",
+      "status": "same",
+      "publication_sha256": "f237a8ec107feef567bec214ec370ae837f09fd7033f4d543dd90d4fa0502dad"
+    },
+    {
+      "archive": "products/permit/scripts/policy/policy_utils.py",
+      "repo": "permit",
+      "path": "scripts/policy/policy_utils.py",
+      "sha256": "2bd468353ecdf0f93dabb06305b9b214a5c2be24c36c2133b782ca656fa2ed5b",
+      "status": "same",
+      "publication_sha256": "2bd468353ecdf0f93dabb06305b9b214a5c2be24c36c2133b782ca656fa2ed5b"
+    },
+    {
+      "archive": "products/permit/scripts/policy/preflight_infrastructure.py",
+      "repo": "permit",
+      "path": "scripts/policy/preflight_infrastructure.py",
+      "sha256": "ac6f7cfc76b9940db3e6d6ae5949ac1ce027a70480167024b46be6536f664e9e",
+      "status": "same",
+      "publication_sha256": "ac6f7cfc76b9940db3e6d6ae5949ac1ce027a70480167024b46be6536f664e9e"
+    },
+    {
+      "archive": "products/permit/scripts/policy/run_all.py",
+      "repo": "permit",
+      "path": "scripts/policy/run_all.py",
+      "sha256": "6ba9ab17d789d64067613f9271465416102bffd0d2424ff16bb18d37d625e3c4",
+      "status": "same",
+      "publication_sha256": "6ba9ab17d789d64067613f9271465416102bffd0d2424ff16bb18d37d625e3c4"
+    },
+    {
+      "archive": "products/permit/scripts/policy/scope_lock_utils.py",
+      "repo": "permit",
+      "path": "scripts/policy/scope_lock_utils.py",
+      "sha256": "37db3f91d0d220ce9960306bfd62526108c459ce69849067cd75b6206bc902a8",
+      "status": "same",
+      "publication_sha256": "37db3f91d0d220ce9960306bfd62526108c459ce69849067cd75b6206bc902a8"
+    },
+    {
+      "archive": "products/permit/scripts/policy/show_run_status.py",
+      "repo": "permit",
+      "path": "scripts/policy/show_run_status.py",
+      "sha256": "b43db683266a14393bb0e08210f4aeffcf51052f3c6f3b8f74e909897d0a40d6",
+      "status": "same",
+      "publication_sha256": "b43db683266a14393bb0e08210f4aeffcf51052f3c6f3b8f74e909897d0a40d6"
+    },
+    {
+      "archive": "products/permit/scripts/policy/stop_validator.py",
+      "repo": "permit",
+      "path": "scripts/policy/stop_validator.py",
+      "sha256": "b97613e1d82010658a33f9846380670e6ccf2ee4a51d7375d8bcc41ee3d65a41",
+      "status": "same",
+      "publication_sha256": "b97613e1d82010658a33f9846380670e6ccf2ee4a51d7375d8bcc41ee3d65a41"
+    },
+    {
+      "archive": "products/permit/scripts/policy/validate_manifest.py",
+      "repo": "permit",
+      "path": "scripts/policy/validate_manifest.py",
+      "sha256": "a941e7d6b221557395b70d5b8777d934545bcde19ce7cf2e865a474325892e6d",
+      "status": "same",
+      "publication_sha256": "a941e7d6b221557395b70d5b8777d934545bcde19ce7cf2e865a474325892e6d"
+    },
+    {
+      "archive": "products/permit/scripts/policy/verify_plugin_release.py",
+      "repo": "permit",
+      "path": "scripts/policy/verify_plugin_release.py",
+      "sha256": "c51343ca1f68a884ff1db30d1650505ca05ebaa960d7c6776df367dd8f36060a",
+      "status": "same",
+      "publication_sha256": "c51343ca1f68a884ff1db30d1650505ca05ebaa960d7c6776df367dd8f36060a"
+    },
+    {
+      "archive": "products/permit/tests/fixtures/public-sources.json",
+      "repo": "permit",
+      "path": "tests/fixtures/public-sources.json",
+      "sha256": "8140801811d522027c2aa665b909f6f1fd0216a57994abd2f42f5b9a5611c6cb",
+      "status": "new",
+      "publication_sha256": "eec79450f1664a67513c17acdddda70b46ec8f963eb9ac7c3af51d9224100747"
+    },
+    {
+      "archive": "products/permit/tests/test_connected_workflow.py",
+      "repo": "permit",
+      "path": "tests/test_connected_workflow.py",
+      "sha256": "142db4733ccaafe4632e0c8c945666d2a9923703f62ba44980025340cdbc8a96",
+      "status": "same",
+      "publication_sha256": "142db4733ccaafe4632e0c8c945666d2a9923703f62ba44980025340cdbc8a96"
+    },
+    {
+      "archive": "products/permit/tests/test_integration_adversarial_mocks.py",
+      "repo": "permit",
+      "path": "tests/test_integration_adversarial_mocks.py",
+      "sha256": "4eb0b68d24d5056ef4248717526174a0c09b08dde3ddf0aabde7a87b5572b2b2",
+      "status": "same",
+      "publication_sha256": "4eb0b68d24d5056ef4248717526174a0c09b08dde3ddf0aabde7a87b5572b2b2"
+    },
+    {
+      "archive": "products/permit/tests/test_pathway.py",
+      "repo": "permit",
+      "path": "tests/test_pathway.py",
+      "sha256": "2024e0bfda7d64517d58295eb64069d509ba997d41345d5e70ca43ada71551ef",
+      "status": "new",
+      "publication_sha256": "02f42d41f0999174eee83d75533c37bd9a808390b54e1d515d91347bd11c23a2"
+    },
+    {
+      "archive": "products/permit/tests/test_permit_foundation.py",
+      "repo": "permit",
+      "path": "tests/test_permit_foundation.py",
+      "sha256": "54314c86b35ddd31650db64bfdd4a14357eeccb1f11b9d73faaf2ef595e5922c",
+      "status": "changed",
+      "publication_sha256": "f2df582c0e7c36d572f9aec8a0a711abcc493b9d645bef75ebd1108458ec725c"
+    },
+    {
+      "archive": "products/permit/tests/test_production_depth_intake_persistence.py",
+      "repo": "permit",
+      "path": "tests/test_production_depth_intake_persistence.py",
+      "sha256": "249c3ed32b243e125eee705a299554e6c873887e9e0671124fd6d4585b00510c",
+      "status": "same",
+      "publication_sha256": "249c3ed32b243e125eee705a299554e6c873887e9e0671124fd6d4585b00510c"
+    },
+    {
+      "archive": "products/permit/tests/test_runtime_foundation.py",
+      "repo": "permit",
+      "path": "tests/test_runtime_foundation.py",
+      "sha256": "8d4db9e1bfac5f6bf9b2fe2e86185f23a7eb030f7d35f3acf1926ae6dea24f8a",
+      "status": "changed",
+      "publication_sha256": "66fcbb570a87cfd5ccd9ff361165fa05c06fe720b865415848fa1634312a08d4"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/__init__.py",
+      "repo": "permit",
+      "path": "civicpermit/__init__.py",
+      "sha256": "a5b97430c7d8d5cfff984857fe16a7c72868d652340640cb9bdcdfe39ddb209c",
+      "status": "changed",
+      "publication_sha256": "5838eeebe8c0666675489d91e5ea0a05fd47a09cf897e26ed5863a6c55515ea8"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/connections.py",
+      "repo": "permit",
+      "path": "civicpermit/connections.py",
+      "sha256": "4159a4eb4a407bebbefeb49bb760788cff3ac51a45c34af094d3be4b5a746798",
+      "status": "same",
+      "publication_sha256": "4159a4eb4a407bebbefeb49bb760788cff3ac51a45c34af094d3be4b5a746798"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/intake_review.py",
+      "repo": "permit",
+      "path": "civicpermit/intake_review.py",
+      "sha256": "694f531a12e56c283579e92f85651d08da776e916021ab19f4d7108c3120b41d",
+      "status": "same",
+      "publication_sha256": "694f531a12e56c283579e92f85651d08da776e916021ab19f4d7108c3120b41d"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/integration_mocks.py",
+      "repo": "permit",
+      "path": "civicpermit/integration_mocks.py",
+      "sha256": "d1f1b614d502ada64a87d879703e9afa72402b69e8df5a1cf25cbd78f783e111",
+      "status": "same",
+      "publication_sha256": "d1f1b614d502ada64a87d879703e9afa72402b69e8df5a1cf25cbd78f783e111"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/main.py",
+      "repo": "permit",
+      "path": "civicpermit/main.py",
+      "sha256": "d1186d8d291225cfff5dc66e40ab435d899d8a059506a6be6f3b413b7a5c8b90",
+      "status": "changed",
+      "publication_sha256": "c34b06d55662b640998369504d6bf039f6b8c1dd20908f04049ebc7e9c74fde5"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/migrations/__init__.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/__init__.py",
+      "sha256": "01c6b95137260717ee792116a0479392b3f2da330542c55dbd181c4a93d404a3",
+      "status": "same",
+      "publication_sha256": "01c6b95137260717ee792116a0479392b3f2da330542c55dbd181c4a93d404a3"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/migrations/env.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/env.py",
+      "sha256": "91715ad26e140d1b25b30ad38b3418d36ea63da4a195348aa5fe621c99edbe5e",
+      "status": "same",
+      "publication_sha256": "91715ad26e140d1b25b30ad38b3418d36ea63da4a195348aa5fe621c99edbe5e"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/migrations/versions/civicpermit_0001_connected.py",
+      "repo": "permit",
+      "path": "civicpermit/migrations/versions/civicpermit_0001_connected.py",
+      "sha256": "e3fc90959836887334b429888407537140fa2d119c202886b63c538feb4e9360",
+      "status": "same",
+      "publication_sha256": "e3fc90959836887334b429888407537140fa2d119c202886b63c538feb4e9360"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/pathway.py",
+      "repo": "permit",
+      "path": "civicpermit/pathway.py",
+      "sha256": "b1e311809d61f4efab043c681efa9d711d5bf4bf76b5f33f808c1769e3687d08",
+      "status": "new",
+      "publication_sha256": "143b44f61f03b20f0ac8c87f42d04a8b17d9a672d212b7c5fd8f82f2f452c271"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/persistence.py",
+      "repo": "permit",
+      "path": "civicpermit/persistence.py",
+      "sha256": "cea7301cde02497e65601351e58100b3211cf79e85e3036f251107f7d21fe95b",
+      "status": "same",
+      "publication_sha256": "cea7301cde02497e65601351e58100b3211cf79e85e3036f251107f7d21fe95b"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/public_ui.py",
+      "repo": "permit",
+      "path": "civicpermit/public_ui.py",
+      "sha256": "0f06685bd18b171987cc08413bc930112f400a03468c0f27e98badba6b732f29",
+      "status": "changed",
+      "publication_sha256": "0f06685bd18b171987cc08413bc930112f400a03468c0f27e98badba6b732f29"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/records_export.py",
+      "repo": "permit",
+      "path": "civicpermit/records_export.py",
+      "sha256": "231801e8bd30b92f0fe6aeb0a8f2aed2d5097acae5f2cc5eda2e18f9c9a1fae8",
+      "status": "same",
+      "publication_sha256": "231801e8bd30b92f0fe6aeb0a8f2aed2d5097acae5f2cc5eda2e18f9c9a1fae8"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/requirement_lookup.py",
+      "repo": "permit",
+      "path": "civicpermit/requirement_lookup.py",
+      "sha256": "f9a1fbd111096e7d4c00cc6cb7f25b9cf91af522f26c743f86234a0ecffe783c",
+      "status": "same",
+      "publication_sha256": "f9a1fbd111096e7d4c00cc6cb7f25b9cf91af522f26c743f86234a0ecffe783c"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/sources.py",
+      "repo": "permit",
+      "path": "civicpermit/sources.py",
+      "sha256": "8e26b8c98635689f985e14d57a0137f6538145c50414da918ba0cb41a7f489a3",
+      "status": "new",
+      "publication_sha256": "8e26b8c98635689f985e14d57a0137f6538145c50414da918ba0cb41a7f489a3"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/submittal_outline.py",
+      "repo": "permit",
+      "path": "civicpermit/submittal_outline.py",
+      "sha256": "f6465de3058d51bb47b7d278e10b67a2ac1ac46aeefa2563eabd041dcb54aae1",
+      "status": "same",
+      "publication_sha256": "f6465de3058d51bb47b7d278e10b67a2ac1ac46aeefa2563eabd041dcb54aae1"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/workflow_models.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_models.py",
+      "sha256": "3d09f3ae137c5c48091e22a60a3e732ea3ec299236778d377df55807bb8bbfdd",
+      "status": "changed",
+      "publication_sha256": "3d09f3ae137c5c48091e22a60a3e732ea3ec299236778d377df55807bb8bbfdd"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/workflow_schema.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_schema.py",
+      "sha256": "07dfc3dfafd5131ffee8b087add38fd7ebf446c2cf104100920636e732aaee59",
+      "status": "same",
+      "publication_sha256": "07dfc3dfafd5131ffee8b087add38fd7ebf446c2cf104100920636e732aaee59"
+    },
+    {
+      "archive": "installed-owned-source/civicpermit/workflow_store.py",
+      "repo": "permit",
+      "path": "civicpermit/workflow_store.py",
+      "sha256": "c3415dd94aaed609a593d28b60d0719f2dc1a504a5f15391d9708714038ea259",
+      "status": "changed",
+      "publication_sha256": "c3415dd94aaed609a593d28b60d0719f2dc1a504a5f15391d9708714038ea259"
+    }
+  ],
+  "identity_note": "Publication commit integrates the already-built candidate; it is not claimed to be the original signing/build commit. Archive paths retain original byte hashes. Documentation entrypoints have a distribution addendum.",
+  "publication_note": "Original accepted bytes remain in the immutable source companion. Canonical sources normalize line endings. Release integration fixes remove a shadowed duplicate class, position imports for lint, format regression/acceptance tools and resolve the paired Core source dependency. Current audited manuals supersede build-time README copies. Each mapped file records both original and publication byte hashes."
+}

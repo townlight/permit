@@ -23,6 +23,18 @@ class Material(Model):
     citation: str = Field(min_length=1, max_length=1000)
 
 
+class PathwayStep(Model):
+    step: str = Field(min_length=1, max_length=2000)
+    citation: str = Field(min_length=1, max_length=1000)
+    typical_time: str = Field(default="", max_length=1000)
+
+
+class SourceLink(Model):
+    provider: Literal["code", "zoning"]
+    source_id: str = Field(min_length=1, max_length=500)
+    expected_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+
+
 class RequirementBundle(Model):
     requirement_id: str = Field(pattern=r"^[a-zA-Z0-9_-]{1,100}$")
     title: str = Field(min_length=1, max_length=500)
@@ -36,6 +48,8 @@ class RequirementBundle(Model):
     content_base64: str = Field(min_length=1, max_length=14_000_000)
     sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     materials: list[Material] = Field(min_length=1, max_length=100)
+    pathway: list[PathwayStep] = Field(default_factory=list, max_length=100)
+    fee_link: SourceLink | None = None
     staff_note: str = Field(default="", max_length=4000)
     change_note: str = Field(min_length=1, max_length=2000)
 
@@ -51,12 +65,6 @@ class RequirementBundle(Model):
         if len(set(ids)) != len(ids):
             raise ValueError("Material identifiers must be unique.")
         return self
-
-
-class SourceLink(Model):
-    provider: Literal["code", "zoning"]
-    source_id: str = Field(min_length=1, max_length=500)
-    expected_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
 
 
 class MaterialReview(Model):

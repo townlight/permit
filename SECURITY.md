@@ -1,3 +1,5 @@
+Townlight Beta 1 source component: **0.3.0+dev.1**. Use the current suite manual and signed installer for beta installation. Earlier release-history text below retains its original scope.
+
 # Security
 
 Townlight Permitting Current version: 0.2.2. This is a narrow truth-repair release with no functional upgrade. The previous v1.0.0 release was published in error and does not prove public-use readiness. It supports permit pre-application and intake-readiness scaffold workflows, but it is not a permitting system of record.

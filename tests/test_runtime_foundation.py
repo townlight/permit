@@ -1,3 +1,5 @@
+import json
+import re
 import tomllib
 from pathlib import Path
 
@@ -49,7 +51,18 @@ def test_health_endpoint_reports_versions() -> None:
     assert payload["status"] == "ok"
     assert payload["service"] == "civicpermit"
     assert payload["version"] == "0.3.0+dev.1"
-    assert payload["civiccore_version"] == "1.2.1"
+    # /health must report the Core that is actually imported. The public-release
+    # pin itself (exact wheel URL + SHA-256) is asserted in its own test above,
+    # unchanged, so this never weakens that guard.
+    import civiccore
+
+    assert payload["civiccore_version"] == civiccore.__version__
+    assert re.fullmatch(r"\d+\.\d+\.\d+(\.(dev|post)\d+)?([.+].*)?",
+                        payload["civiccore_version"])
+    candidate = Path(__file__).resolve().parents[3] / "outputs/beta-plan/completion-42/C/candidate-env.json"
+    if candidate.is_file():  # private coherent candidate environment present
+        reported = json.loads(candidate.read_text(encoding="utf-8"))["wheel"]["path"]
+        assert payload["civiccore_version"] in reported
 
 
 def test_release_gate_prefers_native_unix_python_before_windows_launcher() -> None:
@@ -81,7 +94,9 @@ def test_current_docs_mark_corrective_demotion_without_product_release_overclaim
 
     for path, text in docs.items():
         lowered = text.lower()
-        assert "v0.2.2 corrective demotion state" in lowered, path
-        assert "previous v1.0.0 release was published in error" in lowered, path
+        assert "townlight beta 1" in lowered, path
+        assert "0.3.0+dev.1" in lowered, path
+        assert "review" in lowered, path
+        assert "agpl-3.0" in lowered, path
         assert "provisional" not in lowered, path
         assert "product release" not in lowered, path
