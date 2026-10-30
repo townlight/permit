@@ -300,7 +300,7 @@
       "path": "LICENSE",
       "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/permit/LICENSE-CODE",
@@ -308,7 +308,7 @@
       "path": "LICENSE-CODE",
       "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
       "status": "changed",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/permit/LICENSE-DOCS",
@@ -316,7 +316,7 @@
       "path": "LICENSE-DOCS",
       "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/permit/MILESTONE_0_7_DONE.md",
@@ -340,7 +340,7 @@
       "path": "README.md",
       "sha256": "32bc5717109156d5859be2a39140045cfdae831694ac147612864644b41b1a06",
       "status": "changed",
-      "publication_sha256": "3826eb773e9ef10c44489ad37e1c3806344e1475bffa3afc836ea0e25c8315de"
+      "publication_sha256": "109ed7bcddd71c9028a880a11fe85d3b2e603e1daa6adf3b6d079428aae7e089"
     },
     {
       "archive": "products/permit/README.txt",
@@ -348,7 +348,7 @@
       "path": "README.txt",
       "sha256": "32bc5717109156d5859be2a39140045cfdae831694ac147612864644b41b1a06",
       "status": "changed",
-      "publication_sha256": "3826eb773e9ef10c44489ad37e1c3806344e1475bffa3afc836ea0e25c8315de"
+      "publication_sha256": "109ed7bcddd71c9028a880a11fe85d3b2e603e1daa6adf3b6d079428aae7e089"
     },
     {
       "archive": "products/permit/SECURITY.md",
@@ -356,7 +356,7 @@
       "path": "SECURITY.md",
       "sha256": "305be760fe85697bd5c6e5c6c1dee4f84b34d0646bbc76db4e5b6125256fb7cc",
       "status": "same",
-      "publication_sha256": "b701654f979a2376a24fd9659f3fc4f7ca9dec4ca403f5d99412d9bab3baccea"
+      "publication_sha256": "8bdbc72fb8f40a5338d4d5a9ce1472da184530c25271c028ee172279031f1359"
     },
     {
       "archive": "products/permit/SUPPORT.md",
@@ -636,7 +636,7 @@
       "path": "docs/index.html",
       "sha256": "e8afeb6ebbe652050a7ac21e573293407c037bbff9f8a2a0741eabbd27df3a07",
       "status": "changed",
-      "publication_sha256": "7f6abdb9e9f1ca5adcd24eeb1b9331c3bd7059af5ea1308e68ded06759e1f866"
+      "publication_sha256": "c13e4b472aee31bfb7533e3dfbdda8b903ef7568736f197b2d6c4b83026f1613"
     },
     {
       "archive": "products/permit/docs/licensing/README.md",
@@ -756,7 +756,7 @@
       "path": "pyproject.toml",
       "sha256": "9b619bb4d9163101aa868ae6b8e2e07d5e56a9e370473e4e72fe9eab9862f644",
       "status": "same",
-      "publication_sha256": "717b8ffb341a27e60fd62013f4c0205e0a7611d4e69170c94cfc357419b2d607"
+      "publication_sha256": "10c8f4fb36fa6e7edf3833ddd1c8b089f243f94171f3b68402293b05d25efa91"
     },
     {
       "archive": "products/permit/scripts/check-civiccore-placeholder-imports.py",
@@ -1052,7 +1052,7 @@
       "path": "tests/test_runtime_foundation.py",
       "sha256": "8d4db9e1bfac5f6bf9b2fe2e86185f23a7eb030f7d35f3acf1926ae6dea24f8a",
       "status": "changed",
-      "publication_sha256": "1f6b7a07cdd0f236f5da74d60fe0d7ff398c1352da83705e6b1a17d71cc7d07e"
+      "publication_sha256": "66fcbb570a87cfd5ccd9ff361165fa05c06fe720b865415848fa1634312a08d4"
     },
     {
       "archive": "installed-owned-source/civicpermit/__init__.py",
