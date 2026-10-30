@@ -1,0 +1,107 @@
+{
+  "note": "Synthetic development fixture. Fictional citations and text; no city data.",
+  "sources": [
+    {
+      "provider": "code",
+      "source_id": "sample-adu-checklist",
+      "version": "2026.1",
+      "title": "Sample Development Review Manual, ADU Intake Checklist",
+      "citation": "Sample Development Review Manual \u00c2\u00a74.2 (ADU Intake)",
+      "text": "An accessory dwelling unit pre-application is reviewed first by planning staff for siting, setbacks and parking, then routed to building review once zoning clearance is issued.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-adu-review",
+      "version": "2026.1",
+      "title": "Sample Development Review Manual, ADU Zoning Review",
+      "citation": "Sample Development Review Manual \u00c2\u00a74.5 (ADU Zoning Review)",
+      "text": "Zoning review of an accessory dwelling unit checks lot coverage, rear and side setbacks, and access to a public street; it is a discretionary review step staff complete after a complete submittal.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-building-intake",
+      "version": "2026.3",
+      "title": "Sample Building Division Intake Guide",
+      "citation": "Sample Building Division Intake Guide \u00c2\u00a72.1",
+      "text": "Building permit intake for a residential addition requires a site plan, floor plan, scope of work and energy compliance documentation; residential additions are typically reviewed within three weeks.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-commercial-review",
+      "version": "2026.3",
+      "title": "Sample Building Division Intake Guide, Tenant Improvements",
+      "citation": "Sample Building Division Intake Guide \u00c2\u00a75.4",
+      "text": "A commercial tenant improvement is routed to fire and life-safety review when the scope adds or relocates occupancy; plan review follows a complete submittal.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-general-intake",
+      "version": "2026.2",
+      "title": "Sample Development Services Intake Guide, General Submittals",
+      "citation": "Sample Development Services Intake Guide \u00c2\u00a71.1",
+      "text": "General pre-application submittals are triaged by intake staff, who assign the official permit type before any formal review begins.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-fee-schedule-adu",
+      "version": "2026.1",
+      "title": "Sample Adopted Fee Schedule, Residential",
+      "citation": "Sample Adopted Fee Schedule \u00c2\u00a73 (Residential), ADU line",
+      "text": "Accessory dwelling unit zoning review: 185.00; accessory dwelling unit building review: 420.00. Fees are adopted by resolution and staff confirm the applicable amount at intake.",
+      "visibility": "public"
+    },
+    {
+      "provider": "code",
+      "source_id": "sample-fee-schedule-restricted",
+      "version": "2026.1",
+      "title": "Internal fee worksheet (not public)",
+      "citation": "Internal fee worksheet",
+      "text": "Draft internal fee worksheet, not for publication.",
+      "visibility": "staff"
+    },
+    {
+      "provider": "zoning",
+      "source_id": "sample-zoning-adu-standards",
+      "version": "2026.1",
+      "title": "Sample Zoning Code, ADU Standards",
+      "citation": "Sample Zoning Code \u00c2\u00a718.42.030",
+      "text": "Accessory dwelling units are permitted in residential zones subject to maximum size, setback and parking standards.",
+      "visibility": "public"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "synthetic-adu",
+      "title": "Synthetic A ADU intake",
+      "jurisdiction": "Synthetic A",
+      "project_type": "adu",
+      "source_reference": "Synthetic A Intake 4",
+      "source_date": "2026-01-01",
+      "effective_on": "2026-01-01",
+      "dataset_kind": "fictional",
+      "filename": "requirements.txt",
+      "content_base64": "U3ludGhldGljIEEKUGxhbm5pbmcgaW50YWtlIGZvbGxvd2VkIGJ5IGJ1aWxkaW5nIHJldmlldy4KNyBidXNpbmVzcyBkYXlzCkEgZGltZW5zaW9uZWQgc2l0ZSBwbGFuLg==",
+      "sha256": "9f347533f076dabdb73e71bceb8d33384f58c173b1fe06c9011e73e09b19f9de",
+      "materials": [
+        {
+          "material_id": "site",
+          "description": "A dimensioned site plan.",
+          "citation": "Synthetic A Intake 4"
+        }
+      ],
+      "pathway": [
+        {
+          "step": "Planning intake followed by building review.",
+          "typical_time": "7 business days",
+          "citation": "Synthetic A Intake 4"
+        }
+      ],
+      "change_note": "Synthetic requirements only"
+    }
+  ]
+}

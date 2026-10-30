@@ -56,7 +56,7 @@ for path in [
     "SECURITY.md",
 ]:
     text = (root / path).read_text(encoding="utf-8")
-    assert "0.2.2" in text, f"missing release version in {path}"
+    assert version in text, f"missing release version in {path}"
     assert "0.1.1.dev0" not in text, f"stale dev version in {path}"
 print("PASS: development package version and historical release context verified")
 PY

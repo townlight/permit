@@ -150,8 +150,14 @@ def test_public_ui_route_is_accessible_and_honest() -> None:
     assert '<a class="skip-link" href="#main">Skip to main content</a>' in text
     assert '<main id="main" tabindex="-1">' in text
     assert "v0.2.2 permit pre-application + staff review queues" in text
-    assert "<button" not in text
-    assert "<textarea" not in text
-    assert "Static sample proposal" in text
+    # The page now submits a real project description to the cited pathway API;
+    # it no longer claims to be only a static sample.
+    assert 'id="pathway-form"' in text
+    assert "/api/v1/civicpermit/pathway/explain" in text
+    assert "Describe your project" in text
+    assert "Static sample" in text  # the original ADU sample is kept, labelled
+    assert "likely review steps" in text.lower()
+    assert "Unavailable, not assumed" in text
     assert "does not approve permits" in text
     assert "permitting system of record" in text
+    assert "calculate official fees" in text

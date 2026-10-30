@@ -109,6 +109,19 @@ class IntakeRepository:
                          {k: row["payload"][k] for k in fields})
         return {"items": items, "next_offset": offset + 50 if len(rows) > 50 else None}
 
+    def guidance_requirement(self, project_type, revision_id=None):
+        """Resolve one current requirement, never a sample or stale saved head."""
+        with self.engine.connect() as connection:
+            rows = connection.execute(sa.select(revisions).join(heads,
+                heads.c.revision_id == revisions.c.revision_id).where(heads.c.kind == "requirement")).mappings().all()
+        matches = [row for row in rows if row["payload"]["project_type"].casefold() == project_type.strip().casefold()
+                   and (revision_id is None or row["revision_id"] == revision_id)]
+        if len(matches) != 1:
+            if revision_id:
+                raise ValueError("Selected requirement is unavailable, superseded or belongs to another project type.")
+            return None
+        return self.revision(matches[0]["revision_id"], "requirement")["payload"]
+
     def _links(self, payload):
         return [{"provider": link["provider"], "source": resolve(self.providers, link)}
                 for link in payload["linked_sources"]]
