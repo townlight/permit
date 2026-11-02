@@ -214,3 +214,4 @@ Current owned code is AGPL-3.0-only. Preserve full license, matching correspondi
 ## Earlier documentation
 
 Previous editions are retained under `docs/history/pre-townlight-beta-1/`. They describe their original software and license grants. Use the current Townlight Beta 1 manual for this candidate.
+
