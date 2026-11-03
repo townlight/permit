@@ -8,12 +8,12 @@ from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
-from civicpermit import main
-from civicpermit.pathway import explain_pathway, explain_pathway_with_assistant
-from civicpermit.sources import load_providers, ENV_VAR
-from civicpermit.workflow_models import RequirementBundle
-from civicpermit.workflow_store import IntakeRepository
-from civicpermit.migrations import source_engine, upgrade
+from townlight_permitting import main
+from townlight_permitting.pathway import explain_pathway, explain_pathway_with_assistant
+from townlight_permitting.sources import load_providers, ENV_VAR
+from townlight_permitting.workflow_models import RequirementBundle
+from townlight_permitting.workflow_store import IntakeRepository
+from townlight_permitting.migrations import source_engine, upgrade
 
 FIXTURE = Path(__file__).parent / "fixtures/public-sources.json"
 
@@ -132,7 +132,7 @@ def test_resident_api_uses_explicit_published_bundle(monkeypatch):
     monkeypatch.setenv(ENV_VAR, str(FIXTURE))
     with TestClient(main.app) as client:
         response = client.post(
-            "/api/v1/civicpermit/pathway/explain",
+            "/api/v1/townlight_permitting/pathway/explain",
             json={"project_type": "adu", "proposal": "Synthetic addition"},
         )
     assert response.status_code == 200, response.text
@@ -201,5 +201,5 @@ def test_invalid_published_requirement_configuration_is_unavailable(tmp_path, mo
     path.write_text(json.dumps({"sources": [], "requirements": [{"project_type": "adu"}]}))
     monkeypatch.setenv(ENV_VAR, str(path))
     with TestClient(main.app) as client:
-        response = client.post("/api/v1/civicpermit/pathway/explain", json={"project_type": "adu"})
+        response = client.post("/api/v1/townlight_permitting/pathway/explain", json={"project_type": "adu"})
     assert response.status_code == 503

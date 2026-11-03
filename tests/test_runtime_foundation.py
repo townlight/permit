@@ -5,8 +5,8 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-import civicpermit
-from civicpermit.main import app
+import townlight_permitting
+from townlight_permitting.main import app
 
 
 client = TestClient(app)
@@ -14,19 +14,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_package_version_is_100() -> None:
-    assert civicpermit.__version__ == "0.3.0+dev.1"
+    assert townlight_permitting.__version__ == "0.3.0+dev.2"
 
 
-def test_pyproject_uses_published_civiccore_release_wheel() -> None:
+def test_pyproject_uses_published_townlight_core_release_wheel() -> None:
     data = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     dependencies = data["project"]["dependencies"]
 
     assert data["tool"]["hatch"]["metadata"]["allow-direct-references"] is True
-    assert (
-        "civiccore @ https://github.com/townlight/core/releases/download/"
-        "v1.2.1/civiccore-1.2.1-py3-none-any.whl#sha256=8dde29408e206048bde63ec14156a8e6329382af4d16b12710d12aa5c27f3f59"
-    ) in dependencies
-    assert "civiccore==1.0.0" not in dependencies
+    assert "townlight-core==1.3.0.dev2" in dependencies
+    assert not any("civiccore" in item or "@main" in item for item in dependencies)
 
 
 def test_root_endpoint_states_runtime_boundary() -> None:
@@ -34,8 +31,8 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     assert response.status_code == 200
     payload = response.json()
 
-    assert payload["name"] == "CivicPermit"
-    assert payload["version"] == "0.3.0+dev.1"
+    assert payload["name"] == "TownlightPermitting"
+    assert payload["version"] == "0.3.0+dev.2"
     assert payload["status"] == "v1 permit pre-application and intake-readiness runtime"
     assert "staff review queues" in payload["message"]
     assert "permit approvals" in payload["message"]
@@ -49,20 +46,20 @@ def test_health_endpoint_reports_versions() -> None:
     payload = response.json()
 
     assert payload["status"] == "ok"
-    assert payload["service"] == "civicpermit"
-    assert payload["version"] == "0.3.0+dev.1"
+    assert payload["service"] == "townlight_permitting"
+    assert payload["version"] == "0.3.0+dev.2"
     # /health must report the Core that is actually imported. The public-release
     # pin itself (exact wheel URL + SHA-256) is asserted in its own test above,
     # unchanged, so this never weakens that guard.
-    import civiccore
+    import townlight_core
 
-    assert payload["civiccore_version"] == civiccore.__version__
+    assert payload["townlight_core_version"] == townlight_core.__version__
     assert re.fullmatch(r"\d+\.\d+\.\d+(\.(dev|post)\d+)?([.+].*)?",
-                        payload["civiccore_version"])
+                        payload["townlight_core_version"])
     candidate = Path(__file__).resolve().parents[3] / "outputs/beta-plan/completion-42/C/candidate-env.json"
     if candidate.is_file():  # private coherent candidate environment present
         reported = json.loads(candidate.read_text(encoding="utf-8"))["wheel"]["path"]
-        assert payload["civiccore_version"] in reported
+        assert payload["townlight_core_version"] in reported
 
 
 def test_release_gate_prefers_native_unix_python_before_windows_launcher() -> None:
@@ -95,7 +92,7 @@ def test_current_docs_mark_corrective_demotion_without_product_release_overclaim
     for path, text in docs.items():
         lowered = text.lower()
         assert "townlight beta 1" in lowered, path
-        assert "0.3.0+dev.1" in lowered, path
+        assert "0.3.0+dev.2" in lowered, path
         assert "review" in lowered, path
         assert "agpl-3.0" in lowered, path
         assert "provisional" not in lowered, path

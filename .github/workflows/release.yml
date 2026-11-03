@@ -20,8 +20,10 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - name: Install CivicCore release wheel
-        run: python -m pip install https://github.com/CivicSuite/civiccore/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl
+      - name: Build and install exact candidate Core
+        run: |
+          python -m pip install build
+          python scripts/install-core-candidate.py
 
       - name: Install package and test dependencies
         run: python -m pip install -e ".[dev]"
@@ -32,11 +34,11 @@ jobs:
       - name: Create release notes
         run: |
           cat > release-notes.md <<EOF
-          CivicPermit ${{ github.ref_name }} release.
+          TownlightPermitting ${{ github.ref_name }} release.
 
           Artifacts:
-          - civicpermit wheel
-          - civicpermit source distribution
+          - townlight_permitting wheel
+          - townlight_permitting source distribution
           - SHA256SUMS.txt
 
           Verify locally with:
@@ -55,5 +57,5 @@ jobs:
           gh release create "${{ github.ref_name }}" \
             dist/* \
             --repo "$GH_REPO" \
-            --title "civicpermit ${{ github.ref_name }}" \
+            --title "townlight_permitting ${{ github.ref_name }}" \
             --notes-file release-notes.md

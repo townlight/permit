@@ -1,10 +1,10 @@
 from fastapi.testclient import TestClient
 
-from civicpermit.intake_review import review_intake_readiness
-from civicpermit.main import app
-from civicpermit.records_export import build_policy_export
-from civicpermit.requirement_lookup import lookup_permit_requirement
-from civicpermit.submittal_outline import draft_submittal_outline
+from townlight_permitting.intake_review import review_intake_readiness
+from townlight_permitting.main import app
+from townlight_permitting.records_export import build_policy_export
+from townlight_permitting.requirement_lookup import lookup_permit_requirement
+from townlight_permitting.submittal_outline import draft_submittal_outline
 
 
 client = TestClient(app)
@@ -48,7 +48,7 @@ def test_permit_export_preserves_records_context() -> None:
 
 def test_requirement_lookup_api_success_shape() -> None:
     response = client.post(
-        "/api/v1/civicpermit/requirements/lookup",
+        "/api/v1/townlight_permitting/requirements/lookup",
         json={"project_type": "commercial tenant", "location_context": "downtown"},
     )
     assert response.status_code == 200
@@ -59,7 +59,7 @@ def test_requirement_lookup_api_success_shape() -> None:
 
 
 def test_requirement_lookup_validation_is_actionable() -> None:
-    response = client.post("/api/v1/civicpermit/requirements/lookup", json={})
+    response = client.post("/api/v1/townlight_permitting/requirements/lookup", json={})
 
     assert response.status_code == 422
     detail = response.json()["detail"]
@@ -70,7 +70,7 @@ def test_requirement_lookup_validation_is_actionable() -> None:
 
 def test_oversized_intake_validation_is_actionable() -> None:
     response = client.post(
-        "/api/v1/civicpermit/intake/review",
+        "/api/v1/townlight_permitting/intake/review",
         json={"proposal": "x" * 5001, "project_type": "adu"},
     )
 
@@ -82,11 +82,11 @@ def test_oversized_intake_validation_is_actionable() -> None:
 
 def test_intake_and_submittal_apis() -> None:
     intake = client.post(
-        "/api/v1/civicpermit/intake/review",
+        "/api/v1/townlight_permitting/intake/review",
         json={"proposal": "ADU at 100 Main with site plan and contact email.", "project_type": "adu"},
     )
     outline = client.post(
-        "/api/v1/civicpermit/submittal/outline",
+        "/api/v1/townlight_permitting/submittal/outline",
         json={
             "project_name": "Backyard ADU",
             "proposal": "ADU at 100 Main with site plan.",
@@ -101,7 +101,7 @@ def test_intake_and_submittal_apis() -> None:
 
 def test_development_review_context_returns_review_required_contract() -> None:
     response = client.post(
-        "/api/v1/civicpermit/context/development-review",
+        "/api/v1/townlight_permitting/context/development-review",
         json={
             "project_type": "adu",
             "proposal": "ADU at 100 Main with site plan and contact email.",
@@ -128,7 +128,7 @@ def test_development_review_context_returns_review_required_contract() -> None:
 
 def test_development_review_context_rejects_unsupported_summary_fields() -> None:
     response = client.post(
-        "/api/v1/civicpermit/context/development-review",
+        "/api/v1/townlight_permitting/context/development-review",
         json={
             "project_type": "adu",
             "proposal": "ADU at 100 Main with site plan and contact email.",
@@ -143,7 +143,7 @@ def test_development_review_context_rejects_unsupported_summary_fields() -> None
 
 
 def test_public_ui_route_is_accessible_and_honest() -> None:
-    response = client.get("/civicpermit")
+    response = client.get("/townlight_permitting")
     assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
     text = response.text
@@ -153,7 +153,7 @@ def test_public_ui_route_is_accessible_and_honest() -> None:
     # The page now submits a real project description to the cited pathway API;
     # it no longer claims to be only a static sample.
     assert 'id="pathway-form"' in text
-    assert "/api/v1/civicpermit/pathway/explain" in text
+    assert "/api/v1/townlight_permitting/pathway/explain" in text
     assert "Describe your project" in text
     assert "Static sample" in text  # the original ADU sample is kept, labelled
     assert "likely review steps" in text.lower()

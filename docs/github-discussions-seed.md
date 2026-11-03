@@ -1,6 +1,6 @@
 # GitHub Discussions Seed Posts
 
-<a id="welcome-to-civicpermit"></a>
+<a id="welcome-to-townlight_permitting"></a>
 
 ## Welcome to Townlight Permitting
 

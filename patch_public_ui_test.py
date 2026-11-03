@@ -25,7 +25,7 @@ NEW = '''    assert "v0.2.2 permit pre-application + staff review queues" in tex
     # The page now submits a real project description to the cited pathway API;
     # it no longer claims to be only a static sample.
     assert 'id="pathway-form"' in text
-    assert "/api/v1/civicpermit/pathway/explain" in text
+    assert "/api/v1/townlight_permitting/pathway/explain" in text
     assert "Describe your project" in text
     assert "Static sample" in text  # the original ADU sample is kept, labelled
     assert "likely review steps" in text.lower()

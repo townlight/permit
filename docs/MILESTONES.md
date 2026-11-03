@@ -1,4 +1,4 @@
-<a id="civicpermit-milestones"></a>
+<a id="townlight_permitting-milestones"></a>
 
 # Townlight Permitting Milestones
 
@@ -24,7 +24,7 @@ Permit-intake export checklist and provenance notes.
 
 ## Milestone 6 - Public UI
 
-Accessible public sample page at `/civicpermit`.
+Accessible public sample page at `/townlight_permitting`.
 
 ## Milestone 7 - v0.1.0 Release
 

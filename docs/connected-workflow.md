@@ -8,7 +8,7 @@ determine official completeness, calculate fees, schedule inspections or write t
 a permitting system of record. Historical 0.2.2 release evidence remains intact.
 
 The installed Townlight candidate owns authentication, localhost transport and
-explicit migration. `civicpermit` owns the additive `civicpermit_0001` schema,
+explicit migration. `townlight_permitting` owns the additive `townlight_permitting_0001` schema,
 requirement/case history, material assessments, review attribution and packet
 bytes. Request handlers do not create schema or seed sample municipal authority.
 Core is pinned to the implemented 1.2.1 audit/auth contracts.

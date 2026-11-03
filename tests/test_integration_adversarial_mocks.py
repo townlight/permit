@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civicpermit.integration_mocks import validate_development_review_mocks
-from civicpermit.main import app
+from townlight_permitting.integration_mocks import validate_development_review_mocks
+from townlight_permitting.main import app
 
 
 client = TestClient(app)
@@ -28,7 +28,7 @@ def test_adversarial_mock_rejects_spoofed_approval_and_missing_context() -> None
 
 def test_integration_mock_api_accepts_complete_staff_context_for_review() -> None:
     response = client.post(
-        "/api/v1/civicpermit/integrations/mock/development-review",
+        "/api/v1/townlight_permitting/integrations/mock/development-review",
         json={
             "scenario": "complete-local-context",
             "role": "staff",
@@ -47,7 +47,7 @@ def test_integration_mock_api_accepts_complete_staff_context_for_review() -> Non
 
 def test_integration_mock_api_blocks_stale_or_partial_context() -> None:
     response = client.post(
-        "/api/v1/civicpermit/integrations/mock/development-review",
+        "/api/v1/townlight_permitting/integrations/mock/development-review",
         json={
             "scenario": "stale-zone-context",
             "role": "service",
