@@ -4,7 +4,7 @@ Additive only. Idempotent: refuses to apply twice.
 """
 from pathlib import Path
 
-P = Path(__file__).resolve().parent / "civicpermit" / "main.py"
+P = Path(__file__).resolve().parent / "townlight_permitting" / "main.py"
 text = P.read_text(encoding="utf-8")
 
 if "pathway_explain" in text:
@@ -12,16 +12,16 @@ if "pathway_explain" in text:
     raise SystemExit(0)
 
 # 1. imports
-old_imports = """from civicpermit.public_ui import render_public_lookup_page
-from civicpermit.records_export import build_policy_export"""
-new_imports = """from civicpermit.pathway import (
+old_imports = """from townlight_permitting.public_ui import render_public_lookup_page
+from townlight_permitting.records_export import build_policy_export"""
+new_imports = """from townlight_permitting.pathway import (
     BOUNDARY as PATHWAY_BOUNDARY,
     explain_pathway,
     explain_pathway_with_assistant,
 )
-from civicpermit.public_ui import render_public_lookup_page
-from civicpermit.records_export import build_policy_export
-from civicpermit.sources import load_providers"""
+from townlight_permitting.public_ui import render_public_lookup_page
+from townlight_permitting.records_export import build_policy_export
+from townlight_permitting.sources import load_providers"""
 assert old_imports in text
 text = text.replace(old_imports, new_imports, 1)
 
@@ -39,18 +39,18 @@ assert old_model in text
 text = text.replace(old_model, new_model, 1)
 
 # 3. routes, inserted before the development-review context route
-old_route = '''@app.post("/api/v1/civicpermit/context/development-review")'''
+old_route = '''@app.post("/api/v1/townlight_permitting/context/development-review")'''
 new_route = '''def _pathway_provider():
     """Return the configured live provider, or None when none is available.
 
     Only a genuinely constructible provider is returned; a provider that cannot
     be built is reported to the caller rather than silently replaced by a stub.
     """
-    name = os.environ.get("CIVICPERMIT_LLM_PROVIDER", "").strip()
+    name = os.environ.get("TOWNLIGHT_PERMITTING_LLM_PROVIDER", "").strip()
     if not name:
         return None, None
-    from civiccore.llm.factory import build_provider
-    from civiccore.llm.providers.config import AnthropicConfig, OllamaConfig, OpenAIConfig
+    from townlight_core.llm.factory import build_provider
+    from townlight_core.llm.providers.config import AnthropicConfig, OllamaConfig, OpenAIConfig
 
     configs = {"ollama": OllamaConfig, "openai": OpenAIConfig,
                "anthropic": AnthropicConfig}
@@ -59,9 +59,9 @@ new_route = '''def _pathway_provider():
         raise HTTPException(
             status_code=503,
             detail={"message": f"Configured permit assistant provider '{name}' is not supported.",
-                    "fix": "Set CIVICPERMIT_LLM_PROVIDER to ollama, openai or anthropic."},
+                    "fix": "Set TOWNLIGHT_PERMITTING_LLM_PROVIDER to ollama, openai or anthropic."},
         )
-    model = os.environ.get("CIVICPERMIT_LLM_MODEL") or None
+    model = os.environ.get("TOWNLIGHT_PERMITTING_LLM_MODEL") or None
     return build_provider(name, schema()), model
 
 
@@ -72,7 +72,7 @@ def _pathway_sources():
         raise HTTPException(
             status_code=503,
             detail={"message": "Configured public permit sources could not be read.",
-                    "fix": f"Check CIVICPERMIT_PUBLIC_SOURCES ({type(exc).__name__})."},
+                    "fix": f"Check TOWNLIGHT_PERMITTING_PUBLIC_SOURCES ({type(exc).__name__})."},
         ) from None
 
 
@@ -95,7 +95,7 @@ def _pathway_payload(result) -> dict[str, object]:
     }
 
 
-@app.post("/api/v1/civicpermit/pathway/explain")
+@app.post("/api/v1/townlight_permitting/pathway/explain")
 def pathway_explain(request: PathwayRequest) -> dict[str, object]:
     """Cited likely pathway/attachments/timeline/explainer, no model call."""
 
@@ -108,7 +108,7 @@ def pathway_explain(request: PathwayRequest) -> dict[str, object]:
     return _pathway_payload(result)
 
 
-@app.post("/api/v1/civicpermit/pathway/explain-assisted")
+@app.post("/api/v1/townlight_permitting/pathway/explain-assisted")
 async def pathway_explain_assisted(request: PathwayRequest) -> dict[str, object]:
     """Same, plus an actual configured-provider call; `assistance` says what ran."""
 
@@ -127,7 +127,7 @@ async def pathway_explain_assisted(request: PathwayRequest) -> dict[str, object]
     return payload
 
 
-@app.post("/api/v1/civicpermit/context/development-review")'''
+@app.post("/api/v1/townlight_permitting/context/development-review")'''
 assert old_route in text
 text = text.replace(old_route, new_route, 1)
 

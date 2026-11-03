@@ -6,10 +6,10 @@ import json
 import pytest
 from sqlalchemy import text
 
-from civicpermit.connections import SourceUnavailable
-from civicpermit.migrations import ready, source_engine, upgrade
-from civicpermit.workflow_models import IntakeInput, RequirementBundle
-from civicpermit.workflow_store import IntakeRepository, Conflict
+from townlight_permitting.connections import SourceUnavailable
+from townlight_permitting.migrations import ready, source_engine, upgrade
+from townlight_permitting.workflow_models import IntakeInput, RequirementBundle
+from townlight_permitting.workflow_store import IntakeRepository, Conflict
 
 
 def bundle():

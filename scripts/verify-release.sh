@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="0.3.0+dev.1"
+VERSION="0.3.0+dev.2"
 
 find_python() {
   local candidates=()
-  if [[ -n "${CIVICPERMIT_RELEASE_PYTHON:-}" ]]; then
-    candidates+=("${CIVICPERMIT_RELEASE_PYTHON}")
+  if [[ -n "${TOWNLIGHT_PERMITTING_RELEASE_PYTHON:-}" ]]; then
+    candidates+=("${TOWNLIGHT_PERMITTING_RELEASE_PYTHON}")
   fi
   command -v python3 >/dev/null 2>&1 && candidates+=("$(command -v python3)")
   command -v python >/dev/null 2>&1 && candidates+=("$(command -v python)")
@@ -40,12 +40,12 @@ ${PYTHON_BIN} - <<'PY'
 from pathlib import Path
 import tomllib
 
-version = "0.3.0+dev.1"
+version = "0.3.0+dev.2"
 root = Path(".")
 pyproject = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
 assert pyproject["project"]["version"] == version, pyproject["project"]["version"]
 namespace: dict[str, str] = {}
-exec((root / "civicpermit" / "__init__.py").read_text(encoding="utf-8"), namespace)
+exec((root / "townlight_permitting" / "__init__.py").read_text(encoding="utf-8"), namespace)
 assert namespace["__version__"] == version, namespace["__version__"]
 for path in [
     "README.md",
@@ -68,7 +68,7 @@ echo "==> Documentation gate"
 bash scripts/verify-docs.sh
 
 echo "==> Placeholder import gate"
-${PYTHON_BIN} scripts/check-civiccore-placeholder-imports.py
+${PYTHON_BIN} scripts/check-townlight_core-placeholder-imports.py
 
 echo "==> Ruff"
 ${PYTHON_BIN} -m ruff check .
@@ -81,8 +81,8 @@ from pathlib import Path
 import hashlib
 
 dist = Path("dist")
-wheel = dist / "civicpermit-0.3.0+dev.1-py3-none-any.whl"
-sdist = dist / "civicpermit-0.3.0+dev.1.tar.gz"
+wheel = dist / "townlight_permitting-0.3.0+dev.2-py3-none-any.whl"
+sdist = dist / "townlight_permitting-0.3.0+dev.2.tar.gz"
 assert wheel.exists(), f"missing {wheel}"
 assert sdist.exists(), f"missing {sdist}"
 lines = []

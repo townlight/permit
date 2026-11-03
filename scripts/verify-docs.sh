@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Historical evidence keeps its original identity. These are not current release claims.
 required=(
   "README.md"
   "README.txt"
@@ -28,15 +29,15 @@ required=(
   "docs/index.html"
   "docs/browser-qa-civicpermit-v1.0.0-summary.md"
   "pyproject.toml"
-  "civicpermit/__init__.py"
-  "civicpermit/main.py"
-  "civicpermit/persistence.py"
-  "civicpermit/requirement_lookup.py"
-  "civicpermit/integration_mocks.py"
-  "civicpermit/intake_review.py"
-  "civicpermit/submittal_outline.py"
-  "civicpermit/records_export.py"
-  "civicpermit/public_ui.py"
+  "townlight_permitting/__init__.py"
+  "townlight_permitting/main.py"
+  "townlight_permitting/persistence.py"
+  "townlight_permitting/requirement_lookup.py"
+  "townlight_permitting/integration_mocks.py"
+  "townlight_permitting/intake_review.py"
+  "townlight_permitting/submittal_outline.py"
+  "townlight_permitting/records_export.py"
+  "townlight_permitting/public_ui.py"
 )
 
 echo "==> Required-artifact check"

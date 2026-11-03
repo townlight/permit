@@ -1,12 +1,12 @@
-<a id="civicpermit-implementation-plan"></a>
+<a id="townlight_permitting-implementation-plan"></a>
 
 # Townlight Permitting Implementation Plan
 
-<a id="100---civicpermit-v021-corrective-demotion-state"></a>
+<a id="100---townlight_permitting-v021-corrective-demotion-state"></a>
 
 ## 1.0.0 - Townlight Permitting v0.2.1 corrective demotion state
 
-Townlight Permitting v0.2.1 ships the permit pre-application product lane: runtime shell, permit requirement lookup, staff-gated intake persistence, staff review queue workflows, review-required development-review context packets for CivicZone/CivicCode references, adversarial local integration mocks, intake-readiness review, submittal outline, records-ready export checklist, public sample UI, and Townlight Core v1.1.0 alignment.
+Townlight Permitting v0.2.1 ships the permit pre-application product lane: runtime shell, permit requirement lookup, staff-gated intake persistence, staff review queue workflows, review-required development-review context packets for Townlight Zoning/Townlight Code references, adversarial local integration mocks, intake-readiness review, submittal outline, records-ready export checklist, public sample UI, and Townlight Core v1.1.0 alignment.
 
 This release proves: Townlight Permitting provides permit pre-application and development-review intake support without acting as permitting system of record.
 

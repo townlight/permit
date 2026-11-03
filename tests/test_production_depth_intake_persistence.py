@@ -1,9 +1,9 @@
 from fastapi.testclient import TestClient
 
-import civicpermit.main as main_module
-from civicpermit.main import app
-from civicpermit.persistence import PermitIntakeRepository
-from civicpermit.requirement_lookup import PermitRequirement
+import townlight_permitting.main as main_module
+from townlight_permitting.main import app
+from townlight_permitting.persistence import PermitIntakeRepository
+from townlight_permitting.requirement_lookup import PermitRequirement
 
 
 client = TestClient(app)
@@ -36,31 +36,31 @@ def test_requirement_and_intake_records_persist(tmp_path) -> None:
 
 def test_api_uses_configured_intake_database(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "api-intake-records.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICPERMIT_STAFF_API_KEY", "test-staff-key")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", "test-staff-key")
 
     try:
         requirement_response = client.post(
-            "/api/v1/civicpermit/requirements/lookup",
+            "/api/v1/townlight_permitting/requirements/lookup",
             json={"project_type": "adu", "location_context": "R-2 parcel"},
         )
         create_response = client.post(
-            "/api/v1/civicpermit/intake/review",
+            "/api/v1/townlight_permitting/intake/review",
             json={
                 "proposal": "ADU at 100 Main Street with site plan, project description, contact email, and parcel.",
                 "project_type": "adu",
             },
             headers={
-                "X-CivicPermit-Role": "staff",
-                "X-CivicPermit-Staff-Key": "test-staff-key",
+                "X-Townlight-Permitting-Role": "staff",
+                "X-Townlight-Permitting-Staff-Key": "test-staff-key",
             },
         )
         intake_id = create_response.json()["intake_id"]
         get_response = client.get(
-            f"/api/v1/civicpermit/intake/{intake_id}",
+            f"/api/v1/townlight_permitting/intake/{intake_id}",
             headers={
-                "X-CivicPermit-Role": "staff",
-                "X-CivicPermit-Staff-Key": "test-staff-key",
+                "X-Townlight-Permitting-Role": "staff",
+                "X-Townlight-Permitting-Staff-Key": "test-staff-key",
             },
         )
     finally:
@@ -80,22 +80,22 @@ def test_api_uses_configured_intake_database(monkeypatch, tmp_path) -> None:
 
 def test_persisted_intake_with_missing_materials_creates_staff_review_queue(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "api-staff-review-records.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICPERMIT_STAFF_API_KEY", "test-staff-key")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", "test-staff-key")
     headers = {
-        "X-CivicPermit-Role": "staff",
-        "X-CivicPermit-Staff-Key": "test-staff-key",
+        "X-Townlight-Permitting-Role": "staff",
+        "X-Townlight-Permitting-Staff-Key": "test-staff-key",
     }
 
     try:
         create_response = client.post(
-            "/api/v1/civicpermit/intake/review",
+            "/api/v1/townlight_permitting/intake/review",
             json={"proposal": "ADU request with no contact details.", "project_type": "adu"},
             headers=headers,
         )
         payload = create_response.json()
-        queue_response = client.get("/api/v1/civicpermit/staff/reviews", headers=headers)
-        summary_response = client.get("/api/v1/civicpermit/staff/reviews/summary", headers=headers)
+        queue_response = client.get("/api/v1/townlight_permitting/staff/reviews", headers=headers)
+        summary_response = client.get("/api/v1/townlight_permitting/staff/reviews/summary", headers=headers)
     finally:
         main_module._dispose_intake_repository()
         main_module._intake_db_url = None
@@ -118,16 +118,16 @@ def test_persisted_intake_with_missing_materials_creates_staff_review_queue(monk
 
 def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "api-staff-review-lifecycle.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICPERMIT_STAFF_API_KEY", "test-staff-key")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", "test-staff-key")
     headers = {
-        "X-CivicPermit-Role": "staff",
-        "X-CivicPermit-Staff-Key": "test-staff-key",
+        "X-Townlight-Permitting-Role": "staff",
+        "X-Townlight-Permitting-Staff-Key": "test-staff-key",
     }
 
     try:
         forbidden_response = client.post(
-            "/api/v1/civicpermit/staff/reviews",
+            "/api/v1/townlight_permitting/staff/reviews",
             json={
                 "proposal": "Commercial tenant improvement with incomplete life-safety plan.",
                 "project_type": "commercial",
@@ -135,7 +135,7 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
             },
         )
         create_response = client.post(
-            "/api/v1/civicpermit/staff/reviews",
+            "/api/v1/townlight_permitting/staff/reviews",
             json={
                 "proposal": "Commercial tenant improvement with incomplete life-safety plan.",
                 "project_type": "commercial",
@@ -145,12 +145,12 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
         )
         review_id = create_response.json()["review_id"]
         invalid_close = client.patch(
-            f"/api/v1/civicpermit/staff/reviews/{review_id}",
+            f"/api/v1/townlight_permitting/staff/reviews/{review_id}",
             json={"status": "resolved"},
             headers=headers,
         )
         update_response = client.patch(
-            f"/api/v1/civicpermit/staff/reviews/{review_id}",
+            f"/api/v1/townlight_permitting/staff/reviews/{review_id}",
             json={
                 "status": "resolved",
                 "assigned_to": "permit-tech@example.gov",
@@ -160,7 +160,7 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
         )
         main_module._dispose_intake_repository()
         main_module._intake_db_url = None
-        reloaded_response = client.get("/api/v1/civicpermit/staff/reviews?status=resolved", headers=headers)
+        reloaded_response = client.get("/api/v1/townlight_permitting/staff/reviews?status=resolved", headers=headers)
     finally:
         main_module._dispose_intake_repository()
         main_module._intake_db_url = None
@@ -180,79 +180,79 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
 
 def test_staff_review_queue_requires_persistence_configuration() -> None:
     response = client.get(
-        "/api/v1/civicpermit/staff/reviews",
+        "/api/v1/townlight_permitting/staff/reviews",
         headers={
-            "X-CivicPermit-Role": "staff",
-            "X-CivicPermit-Staff-Key": "unused",
+            "X-Townlight-Permitting-Role": "staff",
+            "X-Townlight-Permitting-Staff-Key": "unused",
         },
     )
 
     assert response.status_code == 503
-    assert "Set CIVICPERMIT_INTAKE_DB_URL" in response.json()["detail"]["fix"]
+    assert "Set TOWNLIGHT_PERMITTING_INTAKE_DB_URL" in response.json()["detail"]["fix"]
 
 
 def test_persisted_intake_requires_staff_role(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "intake-auth.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICPERMIT_STAFF_API_KEY", "test-staff-key")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", "test-staff-key")
 
     try:
         create_response = client.post(
-            "/api/v1/civicpermit/intake/review",
+            "/api/v1/townlight_permitting/intake/review",
             json={
                 "proposal": "CONFIDENTIAL: pre-application acquisition inquiry.",
                 "project_type": "adu",
             },
         )
-        get_response = client.get("/api/v1/civicpermit/intake/not-authorized")
+        get_response = client.get("/api/v1/townlight_permitting/intake/not-authorized")
     finally:
         main_module._dispose_intake_repository()
         main_module._intake_db_url = None
 
     assert create_response.status_code == 403
     assert get_response.status_code == 403
-    assert "X-CivicPermit-Role: staff" in create_response.json()["detail"]["fix"]
+    assert "X-Townlight-Permitting-Role: staff" in create_response.json()["detail"]["fix"]
     db_path.unlink(missing_ok=True)
 
 
 def test_persisted_intake_requires_configured_staff_key(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "intake-missing-key.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.delenv("CIVICPERMIT_STAFF_API_KEY", raising=False)
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.delenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", raising=False)
 
     try:
         response = client.post(
-            "/api/v1/civicpermit/intake/review",
+            "/api/v1/townlight_permitting/intake/review",
             json={
                 "proposal": "ADU at 100 Main Street with site plan.",
                 "project_type": "adu",
             },
-            headers={"X-CivicPermit-Role": "staff"},
+            headers={"X-Townlight-Permitting-Role": "staff"},
         )
     finally:
         main_module._dispose_intake_repository()
         main_module._intake_db_url = None
 
     assert response.status_code == 503
-    assert "Set CIVICPERMIT_STAFF_API_KEY" in response.json()["detail"]["fix"]
+    assert "Set TOWNLIGHT_PERMITTING_STAFF_API_KEY" in response.json()["detail"]["fix"]
     db_path.unlink(missing_ok=True)
 
 
 def test_persisted_intake_rejects_spoofed_staff_key(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "intake-wrong-key.db"
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICPERMIT_STAFF_API_KEY", "real-key")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_STAFF_API_KEY", "real-key")
 
     try:
         response = client.post(
-            "/api/v1/civicpermit/intake/review",
+            "/api/v1/townlight_permitting/intake/review",
             json={
                 "proposal": "CONFIDENTIAL: pre-application acquisition inquiry.",
                 "project_type": "adu",
             },
             headers={
-                "X-CivicPermit-Role": "staff",
-                "X-CivicPermit-Staff-Key": "wrong-key",
+                "X-Townlight-Permitting-Role": "staff",
+                "X-Townlight-Permitting-Staff-Key": "wrong-key",
             },
         )
     finally:
@@ -286,11 +286,11 @@ def test_development_review_context_uses_configured_requirement_database(monkeyp
         ]
     )
     repository.engine.dispose()
-    monkeypatch.setenv("CIVICPERMIT_INTAKE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_PERMITTING_INTAKE_DB_URL", db_url)
 
     try:
         response = client.post(
-            "/api/v1/civicpermit/context/development-review",
+            "/api/v1/townlight_permitting/context/development-review",
             json={
                 "project_type": "solar canopy",
                 "proposal": "Solar canopy at 100 Main with structural drawings.",
@@ -313,7 +313,7 @@ def test_development_review_context_uses_configured_requirement_database(monkeyp
 
 
 def test_intake_lookup_requires_configured_database() -> None:
-    response = client.get("/api/v1/civicpermit/intake/not-configured")
+    response = client.get("/api/v1/townlight_permitting/intake/not-configured")
 
     assert response.status_code == 503
-    assert "Set CIVICPERMIT_INTAKE_DB_URL" in response.json()["detail"]["fix"]
+    assert "Set TOWNLIGHT_PERMITTING_INTAKE_DB_URL" in response.json()["detail"]["fix"]
